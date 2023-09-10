@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Calibre Light;
+    src: url(/fonts/Calibre/Calibre-Light.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Medium;
+    src: url(/fonts/Calibre/Calibre-Medium.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Regular;
+    src: url(/fonts/Calibre/Calibre-Regular.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Semibold;
+    src: url(/fonts/Calibre/Calibre-Semibold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Light;
+    src: url(/fonts/Calibre/Calibre-Light.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Medium;
+    src: url(/fonts/Calibre/Calibre-Medium.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Regular;
+    src: url(/fonts/Calibre/Calibre-Regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Semibold;
+    src: url(/fonts/Calibre/Calibre-Semibold.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Light;
+    src: url(/fonts/Calibre/Calibre-Light.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Medium;
+    src: url(/fonts/Calibre/Calibre-Medium.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Regular;
+    src: url(/fonts/Calibre/Calibre-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Semibold;
+    src: url(/fonts/Calibre/Calibre-Semibold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Light Italic;
+    src: url(/fonts/Calibre/Calibre-LightItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Medium Italic;
+    src: url(/fonts/Calibre/Calibre-MediumItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Regular Italic;
+    src: url(/fonts/Calibre/Calibre-RegularItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Semibold Italic;
+    src: url(/fonts/Calibre/Calibre-SemiboldItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Calibre Light Italic;
+    src: url(/fonts/Calibre/Calibre-LightItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Medium Italic;
+    src: url(/fonts/Calibre/Calibre-MediumItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Regular Italic;
+    src: url(/fonts/Calibre/Calibre-RegularItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Semibold Italic;
+    src: url(/fonts/Calibre/Calibre-SemiboldItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: Calibre Light Italic;
+    src: url(/fonts/Calibre/Calibre-LightItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Medium Italic;
+    src: url(/fonts/Calibre/Calibre-MediumItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Regular Italic;
+    src: url(/fonts/Calibre/Calibre-RegularItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Calibre Semibold Italic;
+    src: url(/fonts/Calibre/Calibre-SemiboldItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: SF Mono Medium;
+    src: url(/fonts/SFMono/SFMono-Medium.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: SF Mono Medium Italic;
+    src: url(/fonts/SFMono/SFMono-MediumItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: SF Mono Regular Italic;
+    src: url(/fonts/SFMono/SFMono-RegularItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: SF Mono Semibold Italic;
+    src: url(/fonts/SFMono/SFMono-SemiboldItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: SF Mono Medium;
+    src: url(/fonts/SFMono/SFMono-Medium.woff) format("woff");
+  }
+  @font-face {
+    font-family: SF Mono Regular;
+    src: url(/fonts/SFMono/SFMono-Regular.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: SF Mono Regular Italic;
+    src: url(/fonts/SFMono/SFMono-RegularItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: SF Mono Semibold Italic;
+    src: url(/fonts/SFMono/SFMono-SemiboldItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: SF Mono Medium;
+    src: url(/fonts/SFMono/SFMono-Medium.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: SF Mono Regular;
+    src: url(/fonts/SFMono/SFMono-Regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: SF Mono Semibold;
+    src: url(/fonts/SFMono/SFMono-Semibold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: SF Mono Semibold Italic;
+    src: url(/fonts/SFMono/SFMono-SemiboldItalic.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: SF Mono Medium Italic;
+    src: url(/fonts/SFMono/SFMono-MediumItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: SF Mono Regular;
+    src: url(/fonts/SFMono/SFMono-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: SF Mono Semibold;
+    src: url(/fonts/SFMono/SFMono-Semibold.woff) format("woff");
+  }
+  @font-face {
+    font-family: SF Mono Medium Italic;
+    src: url(/fonts/SFMono/SFMono-MediumItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: SF Mono Regular Italic;
+    src: url(/fonts/SFMono/SFMono-RegularItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: SF Mono Semibold;
+    src: url(/fonts/SFMono/SFMono-Semibold.woff2) format("woff2");
+  }
+
+  .list {
+    @apply relative pl-5 before:content-['▹'] before:absolute before:left-0 top-[5px] before:text-sm before:text-sky-500 before:dark:text-green;
+  }
+}
+
+@layer components {
+  .hero-size {
+    font-size: clamp(40px, 8vw, 80px);
+  }
+
+  .featured-size {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+
+  .side {
+    @apply after:content-[''] after:block after:w-[1px] after:h-[90px] after:mx-auto after:bg-slate;
+  }
+
+  .section-header {
+    @apply after:content-[''] after:hidden after:sm:block after:relative after:top-[-14px] after:w-[300px] after:h-[1px] after:ml-5 after:bg-[#233554];
+  }
+
+  .section-header-size {
+    font-size: clamp(26px, 5vw, 32px);
+  }
+
+  .section-header-size-2 {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+
+  .title {
+    font-size: clamp(40px, 5vw, 60px);
+  }
+
+  .grid-col-featured {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .grid-col-featured {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .project-description-shadow {
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  }
+
+  .project-image {
+    grid-column: 6 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .project-content {
+    position: relative;
+    grid-column: 1 / 7;
+    grid-row: 1 / -1;
+  }
+
+  .project-content .externals {
+    justify-content: flex-start;
+  }
+
+  .idea:nth-of-type(odd) .project-content .externals {
+    justify-content: flex-end;
+  }
+
+  .project-content ul li {
+    margin: 0px 20px 5px 0px;
+  }
+
+  .idea:nth-of-type(odd) .project-content ul li {
+    margin: 0px 0px 5px 20px;
+  }
+
+  .idea:nth-of-type(odd) .project-image {
+    grid-column: 1 / 8;
+  }
+
+  .idea:nth-of-type(odd) .project-content {
+    grid-column: 7 / -1;
+    text-align: right;
+  }
+
+  .idea:nth-of-type(odd) .project-content ul {
+    justify-content: flex-end;
+  }
+
+  .zoom-hover-center {
+    @apply transition ease-in-out delay-150 hover:translate-y-0 hover:scale-110 duration-300;
+  }
+
+  .zoom-hover-center-lg {
+    @apply transition ease-in-out delay-150 hover:translate-y-0 hover:scale-125 duration-300;
+  }
+
+  .zoom-hover-top {
+    @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300;
+  }
+}

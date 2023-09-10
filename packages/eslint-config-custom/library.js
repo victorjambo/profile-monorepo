@@ -15,6 +15,7 @@ module.exports = {
   extends: [
     "@vercel/style-guide/eslint/node",
     "@vercel/style-guide/eslint/typescript",
+    "next/core-web-vitals"
   ].map(require.resolve),
   parserOptions: {
     project,
