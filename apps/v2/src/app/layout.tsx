@@ -1,6 +1,8 @@
 import "./globals.css";
 import "ui/styles.css";
 import type { Metadata } from "next";
+import Header from "../components/header";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Victor Mutai",
@@ -14,11 +16,9 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html className="scroll-smooth w-full box-border" lang="en">
-      {/* <Header /> */}
+      <Header />
       <body className="bg-white dark:bg-slate-900 font-mono">
-        {/* <Providers> */}
-          {children}
-        {/* </Providers> */}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

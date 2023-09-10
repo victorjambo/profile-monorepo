@@ -1,3 +1,4 @@
+"use client";
 import { DEV_NAME } from "../../utils/data";
 
 const HeroSection: React.FC = () => {
@@ -26,14 +27,12 @@ const HeroSection: React.FC = () => {
           &nbsp;An open-source, scalable, feeless, green & permissionless distributed ledger.
         </p>
         <div className="mt-[50px]">
-          <a
-            href="https://resume.github.io/?victorjambo"
-            target="_blank"
+        <button
             className="text-sky-500 dark:text-green hover:bg-sky-50 dark:hover:bg-green-tint border border-sky-500 dark:border-green rounded py-5 px-7 text-sm cursor-pointer"
-            rel="noreferrer"
+            onClick={() => console.log("1dsfsdfsdfsd")}
           >
             Github Resume!
-          </a>
+          </button>
         </div>
       </div>
     </section>
