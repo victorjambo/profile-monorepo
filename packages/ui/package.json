@@ -16,8 +16,9 @@
     "dev": "tsup --watch",
     "check-types": "tsc --noEmit"
   },
-  "peerDependencies": {
-    "react": "^18.2.0"
+  "dependencies": {
+    "react": "^18.2.0",
+    "next": "^13.4.19"
   },
   "devDependencies": {
     "@types/react": "^18.2.5",

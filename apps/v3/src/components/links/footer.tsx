@@ -7,16 +7,12 @@ const FooterLinks: React.FC = () => {
       <Link
         className="hover:border-b border-slate-900 border-dotted"
         href="/colophon"
-        rel="noopener noreferrer"
-        target="_blank"
       >
         colophon
       </Link>
       <Link
         className="hover:border-b border-slate-900 border-dotted"
         href="/log"
-        rel="noopener noreferrer"
-        target="_blank"
       >
         log
       </Link>
