@@ -1,21 +1,17 @@
 {
-  "name": "v2",
-  "version": "2.0.0",
+  "name": "v3",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3003",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.14",
-    "@heroicons/react": "^2.0.18",
     "next": "^13.4.19",
-    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.32.1",
     "ui": "workspace:*"
   },
   "devDependencies": {
