@@ -8,12 +8,9 @@ export default function Page(): JSX.Element {
     <main className="w-full">
       <div className="h-screen p-11 grid grid-cols-2">
         <Hero />
-
         <HeaderLinks />
       </div>
-      <div className="h-fit p-11">
-        <Work />
-      </div>
+      <Work />
       <Footer />
     </main>
   );
