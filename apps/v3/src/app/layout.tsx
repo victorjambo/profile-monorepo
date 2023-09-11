@@ -1,9 +1,11 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const comfortaa = Comfortaa({
+  subsets: ['latin']
+});
 
 export const metadata: Metadata = {
   title: "Victor Mutai",
@@ -17,7 +19,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${comfortaa.className} text-slate-800`}>{children}</body>
     </html>
   );
 }
