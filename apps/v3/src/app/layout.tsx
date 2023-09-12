@@ -93,7 +93,7 @@ export default function RootLayout({
       <Analytics />
 
       <body
-        className={`${comfortaa.className} old-text-slate-800 text-[#004580] bg-[#fff2e2]`}
+        className={`${comfortaa.className} old-text-slate-800 text-serket bg-summer `}
       >
         {children}
       </body>
