@@ -3,6 +3,8 @@ import "ui/styles.css";
 
 import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
+// import { Header } from "ui";
+import Script from 'next/script'
 
 const comfortaa = Comfortaa({
   subsets: ['latin']
