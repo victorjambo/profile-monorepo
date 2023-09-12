@@ -1,20 +1,25 @@
 import React from "react";
+import Item from "./item";
 
 const Work: React.FC = () => {
   return (
-    <div className="h-fit p-11">
+    <div className="h-fit px-11 pt-11">
       <div className="grid grid-cols-2">
         <div />
-        <div className="flex flex-col w-3/4 justify-center">
-          <div className="py-5">stepping stones / where i've been </div>
+        <div className="flex flex-col w-full items-center">
+          <div className="w-3/4">
+            <div className="py-5">stepping stones / where i've been</div>
 
-          <div className="">
-            {history.map((h) => (
-              <div key={h.noun} className="grid grid-cols-2 border-b">
-                <div>{h.noun}</div>
-                <div className="place-self-end text-right">{h.verb}</div>
-              </div>
-            ))}
+            <div>
+              {works.map((work, idx) => (
+                <Item
+                  key={work.noun}
+                  item={work}
+                  counter={idx + 1}
+                  count={works.length}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -24,17 +29,30 @@ const Work: React.FC = () => {
 
 export default Work;
 
-const history = [
+const works = [
   {
-    noun: "1. IOTA",
+    noun: "IOTA",
     verb: "Web3 investing infra & capital allocation capital",
+    link: "https://iota.org",
   },
   {
-    noun: "2. Syndicate",
+    noun: "Syndicate",
     verb: "Web3 investing & capital allocation",
+    link: "https://syndicate.io",
   },
   {
-    noun: "3. Prezi",
+    noun: "Prezi",
     verb: "capital Web3 investing Web3 infra & capital allocation",
+    link: "https://prezi.com",
+  },
+  {
+    noun: "Andela",
+    verb: "capital Web3 investing Web3 infra & capital allocation",
+    link: "https://andela.com",
+  },
+  {
+    noun: "Glassdoor",
+    verb: "capital Web3 investing Web3 infra & capital allocation",
+    link: "https://glassdoor.com",
   },
 ];

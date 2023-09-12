@@ -2,6 +2,7 @@ import HeaderLinks from "../components/links/header";
 import Work from "../components/work";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
+import Projects from "../components/projects";
 
 export default function Page(): JSX.Element {
   return (
@@ -11,6 +12,7 @@ export default function Page(): JSX.Element {
         <HeaderLinks />
       </div>
       <Work />
+      <Projects />
       <Footer />
     </main>
   );
