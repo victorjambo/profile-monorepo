@@ -1,32 +1,36 @@
 import React from "react";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+
+const links = [
+  {
+    title: "Github",
+    link: "https://github.com/victorjambo/",
+  },
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/mutaivictor/",
+  },
+  {
+    title: "Mail",
+    link: "mailto:victormutaijambo+dev@gmail.com",
+  },
+];
 
 const HeaderLinks: React.FC = () => {
   return (
     <div className="flex flex-col w-full items-end">
-      <a
-        className="hover:border-b border-slate-900 border-dotted"
-        href="https://github.com/victorjambo/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Github
-      </a>
-      <a
-        className="hover:border-b border-slate-900 border-dotted"
-        href="https://www.linkedin.com/in/mutaivictor/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Linkedin
-      </a>
-      <a
-        className="hover:border-b border-slate-900 border-dotted"
-        href="mailto:victormutaijambo+dev@gmail.com"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Mail
-      </a>
+      {links.map((link) => (
+        <a
+          className="hover:border-b old-border-slate-900 border-[#357efc] border-dotted flex"
+          href={link.link}
+          rel="noopener noreferrer"
+          target="_blank"
+          key={link.title}
+        >
+          <span>{link.title}</span>
+          <ArrowUpRightIcon className="w-3 h-3" />
+        </a>
+      ))}
     </div>
   );
 };
