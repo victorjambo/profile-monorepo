@@ -12,18 +12,6 @@ const laila = Laila({
   weight: "700",
 });
 
-export const getFirstOrString = (
-  param: string | string[] | undefined
-): string | undefined => {
-  if (!param) return;
-
-  if (typeof param === "string") {
-    return param;
-  }
-
-  return param[0];
-};
-
 export default function Page({ params }: { params: { id: string }}): JSX.Element {
   const [blog, setBlog] = useState<IBlog | null>(null);
 
