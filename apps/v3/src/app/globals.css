@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 /* TODO */
-/* .external-link-img {
+.external-link-img {
   visibility: hidden;
 }
-
+/* 
 .external-link:hover .external-link-img {
   visibility: visible;
   transition: ease .2s;
