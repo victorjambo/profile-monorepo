@@ -12,9 +12,9 @@ const FooterLinks: React.FC = () => {
       </Link>
       <Link
         className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
-        href="/log"
+        href="/logs"
       >
-        log
+        logs
       </Link>
     </div>
   );
