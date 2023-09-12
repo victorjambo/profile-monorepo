@@ -7,14 +7,15 @@ export function NotImplemented({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <main className="w-full relative">
-      <div className="p-10 absolute inset-0">
+    <main className="ui-w-full ui-relative">
+      <div className="ui-p-10 ui-absolute ui-inset-0">
         <Link href="/">Back</Link>
       </div>
-      <div className="w-full h-screen flex justify-center items-center ">
-        Not implemented
+      <div className="ui-w-full ui-h-screen ui-flex ui-justify-center ui-items-center">
+          This site is still in development.<br />
+          Check back later for more stuff...
       </div>
-      <div className="absolute bottom-0 w-full">{children}</div>
+      <div className="ui-absolute ui-bottom-0 ui-w-full">{children}</div>
     </main>
   );
 }

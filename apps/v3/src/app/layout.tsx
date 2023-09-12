@@ -1,4 +1,5 @@
 import "./globals.css";
+import "ui/styles.css";
 
 import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
