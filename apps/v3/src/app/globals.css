@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.external-link-img {
+/* TODO */
+/* .external-link-img {
   visibility: hidden;
 }
 
 .external-link:hover .external-link-img {
   visibility: visible;
   transition: ease .2s;
-}
+} */
