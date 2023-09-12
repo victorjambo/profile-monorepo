@@ -31,28 +31,28 @@ export default Work;
 
 const works = [
   {
-    noun: "IOTA",
-    verb: "Web3 investing infra & capital allocation capital",
+    noun: "IOTA Foundation",
+    verb: "Building infrastructure for global trade",
     link: "https://iota.org",
   },
   {
     noun: "Syndicate",
-    verb: "Web3 investing & capital allocation",
+    verb: "Web3 investing infra & capital allocation capital",
     link: "https://syndicate.io",
   },
   {
     noun: "Prezi",
-    verb: "capital Web3 investing Web3 infra & capital allocation",
+    verb: "Built payments platform",
     link: "https://prezi.com",
   },
   {
     noun: "Andela",
-    verb: "capital Web3 investing Web3 infra & capital allocation",
+    verb: "I'll update this later",
     link: "https://andela.com",
   },
   {
     noun: "Glassdoor",
-    verb: "capital Web3 investing Web3 infra & capital allocation",
+    verb: "I'll update this later",
     link: "https://glassdoor.com",
   },
 ];
