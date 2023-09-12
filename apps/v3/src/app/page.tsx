@@ -7,8 +7,10 @@ import Projects from "../components/projects";
 export default function Page(): JSX.Element {
   return (
     <main className="w-full">
-      <div className="h-screen p-11 grid grid-cols-2">
-        <Hero />
+      <div className="h-screen p-6 md:p-11 grid md:grid-cols-2">
+        <div className="md:order-first order-last">
+          <Hero />
+        </div>
         <HeaderLinks />
       </div>
       <Work />
