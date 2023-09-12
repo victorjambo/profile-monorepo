@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <Analytics />
 
       <body
