@@ -51,8 +51,8 @@ const projects = [
   {
     noun: "Portfolio V2",
     verb: "This technical Portfolio website. Code is open source.",
-    link: "https://github.com/victorjambo/personal-resume",
-    img: "/images/banners/profile-v1.png"
+    link: "https://profile-monorepo-v2.vercel.app/",
+    img: "/images/banners/profile-v2.png"
   },
   {
     noun: "Portfolio V1",
