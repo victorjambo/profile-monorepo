@@ -89,11 +89,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <Analytics />
 
       <body
-        className={`${comfortaa.className} old-text-slate-800 text-serket bg-summer `}
+        className={`${comfortaa.className} text-serket dark:text-slate-300 bg-summer dark:bg-gray-900`}
       >
         {children}
       </body>

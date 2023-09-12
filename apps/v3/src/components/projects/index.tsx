@@ -7,7 +7,7 @@ const Projects: React.FC = () => {
       <div className="grid md:grid-cols-2">
         <div className="flex flex-col w-full items-center">
           <div className="w-full lg:w-3/4">
-            <div className="py-5">some projects i worked on</div>
+            <div className="py-5 dark:text-white">some projects i worked on</div>
 
             <div>
               {projects.map((project, idx) => (

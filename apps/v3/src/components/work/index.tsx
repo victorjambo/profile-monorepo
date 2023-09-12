@@ -8,7 +8,7 @@ const Work: React.FC = () => {
         <div />
         <div className="flex flex-col w-full items-center">
           <div className="w-full lg:w-3/4">
-            <div className="py-5">stepping stones / where i've been</div>
+            <div className="py-5 dark:text-white">stepping stones / where i've been</div>
 
             <div>
               {works.map((work, idx) => (

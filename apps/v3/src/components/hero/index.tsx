@@ -9,7 +9,7 @@ const laila = Laila({
 const Hero: React.FC = () => {
   return (
     <div className="flex flex-col justify-end h-full max-w-lg">
-      <div className={`${laila.className} text-4xl font-bold pb-9`}>
+      <div className={`${laila.className} dark:text-white text-4xl font-bold pb-9`}>
         Victor Mutai
       </div>
       <div className="flex flex-col space-y-4">
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           Currently building distributed systems at&nbsp;
           <a
             href="https://iota.org"
-            className="border-b old-border-slate-900 border-vase border-dotted"
+            className="border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
             rel="noopener noreferrer"
             target="_blank"
           >

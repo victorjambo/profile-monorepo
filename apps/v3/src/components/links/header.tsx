@@ -21,7 +21,7 @@ const HeaderLinks: React.FC = () => {
     <div className="flex flex-col w-full items-end">
       {links.map((link) => (
         <a
-          className="hover:border-b old-border-slate-900 border-vase border-dotted flex"
+          className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted flex"
           href={link.link}
           rel="noopener noreferrer"
           target="_blank"

@@ -29,7 +29,7 @@ const Item: React.FC<IItem> = ({
   return (
     <a
       href={link}
-      className={`grid grid-cols-2 py-4 hover:decoration-dashed hover:decoration-vase hover:underline relative external-link ${
+      className={`grid grid-cols-2 py-4 hover:decoration-dashed hover:decoration-vase dark:border-slate-300 hover:underline dark:hover:decoration-slate-300 relative external-link ${
         counter === count ? "" : "border-b"
       }`}
       rel="noopener noreferrer"
