@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           Currently building distributed systems at&nbsp;
           <a
             href="https://iota.org"
-            className="border-b border-slate-900 border-dotted"
+            className="border-b old-border-slate-900 border-[#357efc] border-dotted"
             rel="noopener noreferrer"
             target="_blank"
           >

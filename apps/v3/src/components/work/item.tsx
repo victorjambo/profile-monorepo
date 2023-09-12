@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface IItem {
   item: {
@@ -29,7 +29,7 @@ const Item: React.FC<IItem> = ({
   return (
     <a
       href={link}
-      className={`grid grid-cols-2 py-4 hover:decoration-dashed hover:underline relative external-link ${
+      className={`grid grid-cols-2 py-4 hover:decoration-dashed hover:decoration-[#357efc] hover:underline relative external-link ${
         counter === count ? "" : "border-b"
       }`}
       rel="noopener noreferrer"

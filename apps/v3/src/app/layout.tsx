@@ -20,7 +20,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={`${comfortaa.className} text-slate-800`}>{children}</body>
+      <body className={`${comfortaa.className} old-text-slate-800 text-[#004580] bg-[#fff2e2]`}>{children}</body>
     </html>
   );
 }
