@@ -4,7 +4,6 @@ import React from "react";
 export function Analytics(): JSX.Element {
   return (
     <React.Fragment>
-      <Script>console.log(122343)</Script>
       <Script
         dangerouslySetInnerHTML={{
           __html: `(function(h,o,t,j,a,r){
