@@ -2,14 +2,8 @@
  * In future change these blog post to markdown.
  */
 
-export interface IBlog {
-  id: number;
-    title: string;
-    href?: string;
-    description: string;
-    date: string;
-    datetime: string;
-}
+import { IBlog } from "models";
+
 export const blogs: IBlog[] = [
   {
     id: 1,

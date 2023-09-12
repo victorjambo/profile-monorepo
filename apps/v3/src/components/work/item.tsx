@@ -1,16 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { IItem } from "models";
 
-interface IItem {
-  item: {
-    noun: string;
-    verb: string;
-    link: string;
-    img?: string;
-  };
-  counter: number;
-  count: number;
-}
 const Item: React.FC<IItem> = ({
   item: { noun, verb, link, img },
   counter,

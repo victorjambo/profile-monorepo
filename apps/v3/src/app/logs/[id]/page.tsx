@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Laila } from "next/font/google";
-import { IBlog, blogs } from "shared-data";
+import { blogs } from "shared-data";
+import { IBlog } from "models";
 import { NavBack } from "ui";
 import HeaderLinks from "../../../components/links/header";
 import Footer from "../../../components/footer";

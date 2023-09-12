@@ -1,11 +1,7 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
-
-export interface INavBack {
-  path?: string;
-  label?: string;
-}
+import { INavBack } from "models";
 
 export function NavBack({ path, label }: INavBack): JSX.Element {
   return (
