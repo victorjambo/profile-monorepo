@@ -1,16 +1,11 @@
-"use client";
-import { SEO } from "./seo";
+import Script from "next/script";
+import React from "react";
 
-export const Header: React.FC<{ children?: React.ReactNode }> = ({
-  children,
-}) => {
+export function Analytics(): JSX.Element {
   return (
-    <head>
-      <SEO />
-      <link rel="icon" href="/favicon.ico" />
-      {children}
-
-      <script
+    <React.Fragment>
+      <Script>console.log(122343)</Script>
+      <Script
         dangerouslySetInnerHTML={{
           __html: `(function(h,o,t,j,a,r){
                           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -23,11 +18,11 @@ export const Header: React.FC<{ children?: React.ReactNode }> = ({
         }}
       />
 
-      <script
+      <Script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <script
+      <Script
         dangerouslySetInnerHTML={{
           __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -39,6 +34,6 @@ export const Header: React.FC<{ children?: React.ReactNode }> = ({
               `,
         }}
       />
-    </head>
+    </React.Fragment>
   );
-};
+}

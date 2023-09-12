@@ -5,5 +5,4 @@ import "./styles.css";
 export * from "./card";
 export * from "./resume";
 export * from "./notImplemented";
-export * from "./header";
-export * from "./seo";
+export * from "./analytics";

@@ -21,6 +21,7 @@
     "next": "^13.4.19"
   },
   "devDependencies": {
+    "@types/node": "^18.11.17",
     "@types/react": "^18.2.5",
     "autoprefixer": "^10.4.13",
     "eslint-config-custom": "workspace:*",
