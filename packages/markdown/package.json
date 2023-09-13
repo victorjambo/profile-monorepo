@@ -1,0 +1,25 @@
+{
+  "name": "markdown",
+  "version": "0.0.0",
+  "private": true,
+  "types": "src/index.ts",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src/",
+    "dev": "tsup --watch",
+    "check-types": "tsc --noEmit",
+    "test": "echo 'Add test script here'"
+  },
+  "dependencies": {
+    "next": "^13.4.19"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "models": "workspace:*",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.1.3",
+    "typescript": "^5.1.6"
+  }
+}
