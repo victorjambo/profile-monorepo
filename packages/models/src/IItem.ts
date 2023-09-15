@@ -1,10 +1,13 @@
 export interface IItem {
-  item: {
-    noun: string;
-    verb: string;
-    link: string;
-    img?: string;
-  };
+  title: string;
+  role: string;
+  link: string;
+  img?: string;
+  desc?: string;
+}
+
+export interface IItemProp {
+  item: IItem;
   counter: number;
   count: number;
 }

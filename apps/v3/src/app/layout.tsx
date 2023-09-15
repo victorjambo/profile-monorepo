@@ -22,7 +22,7 @@ export default function RootLayout({
       <Analytics />
 
       <body
-        className={`${comfortaa.className} text-serket dark:text-slate-300 bg-summer dark:bg-gray-900`}
+        className={`${comfortaa.className} light old-text-serket dark:text-slate-300 old-bg-summer dark:bg-gray-900`}
       >
         {children}
       </body>

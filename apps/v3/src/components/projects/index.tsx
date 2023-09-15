@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "../shared/item";
+import { projects } from "shared-data";
 
 const Projects: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Projects: React.FC = () => {
             <div>
               {projects.map((project, idx) => (
                 <Item
-                  key={project.noun}
+                  key={project.title}
                   item={project}
                   counter={idx + 1}
                   count={projects.length}
@@ -29,35 +30,4 @@ const Projects: React.FC = () => {
 
 export default Projects;
 
-const projects = [
-  {
-    noun: "Lit Staking",
-    verb: "Official staking site for LIT Coin",
-    link: "https://coinmarketcap.com/currencies/lit/",
-    img: "/images/banners/lit-staking.png"
-  },
-  {
-    noun: "Tokenkid",
-    verb: "TokenKid is multichain NFT Marketplace. Supports Celo and Goerli Testnet",
-    link: "https://tokenkid.netlify.app/",
-    img: "/images/banners/tokenkid.png"
-  },
-  {
-    noun: "Metamask Clone",
-    verb: "Metamask Portfolio Clone: helps you View and manage your entire Web3 portfolio.",
-    link: "https://lighthearted-starburst-103cb0.netlify.app/",
-    img: "/images/banners/meta.png"
-  },
-  {
-    noun: "Portfolio V2",
-    verb: "This technical Portfolio website. Code is open source.",
-    link: "https://profile-monorepo-v2.vercel.app/",
-    img: "/images/banners/profile-v2.png"
-  },
-  {
-    noun: "Portfolio V1",
-    verb: "This technical Portfolio website. Code is open source.",
-    link: "https://github.com/victorjambo/personal-resume",
-    img: "/images/banners/profile-v1.png"
-  },
-];
+
