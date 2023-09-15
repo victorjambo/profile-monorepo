@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "../work/item";
+import Item from "../shared/item";
 
 const Projects: React.FC = () => {
   return (
