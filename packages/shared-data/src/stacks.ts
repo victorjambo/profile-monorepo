@@ -32,5 +32,6 @@ export const Tech = [
   "CSS",
   "MySQL",
   "Redis",
-  "Git"
+  "Git",
+  "PostgreSQL"
 ] as const;
