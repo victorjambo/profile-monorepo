@@ -1,39 +1,49 @@
-import { IItem } from "models";
+import { IEvent } from "models";
+import { Tech } from "./stacks";
 
-export const works: IItem[] = [
+export const works: IEvent<(typeof Tech)[number]>[] = [
   {
     title: "IOTA Foundation",
-    role: "Building infrastructure for global trade",
+    role: "Senior Software Engineer",
     link: "https://iota.org",
-    desc: `notable work included the investment club experience, account creation +
-           authentication, and profiles for individuals and on-chain communities.`,
+    tech: ["React", "TypeScript", "Node.js", "AWS"],
+    desc: `Building an open-source infrastructure for global trade.`,
   },
   {
     title: "Syndicate",
-    role: "Web3 investing infra & capital allocation capital",
+    role: "Fullstack software engineer",
     link: "https://syndicate.io",
-    desc: `notable work included the investment club experience, account creation +
-           authentication, and profiles for individuals and on-chain communities.`,
+    tech: ["React", "TypeScript", "Next.js", "GraphQL", "web3"],
+    desc: `spent 2 years building web3 investments products and features.
+           <br />
+           notable work included the 
+           <a
+            rel="noopener noreferrer"
+            target="_blank"
+            style="border-bottom-width: 1px; border-style: dotted; border-color: #357EFC;"
+            href="https://techcrunch.com/2022/01/25/crypto-startup-syndicate-looks-to-demystify-daos-with-web3-investment-club-product/">
+              investment club
+           </a> 
+           experience, account creation + authentication, and profiles for individuals and on-chain communities.`,
   },
   {
     title: "Prezi",
-    role: "Built payments platform",
+    role: "Fullstack Software Engineer, Payments",
     link: "https://prezi.com",
+    tech: ["Python", "Django", "React", "TypeScript", "ETL"],
     desc: `notable work included the investment club experience, account creation +
            authentication, and profiles for individuals and on-chain communities.`,
   },
   {
     title: "Andela",
-    role: "I'll update this later",
+    role: "Fullstack Software Engineer",
+    tech: ["React", "Python", "Flask", "Node.js"],
     link: "https://andela.com",
-    desc: `notable work included the investment club experience, account creation +
-           authentication, and profiles for individuals and on-chain communities.`,
   },
   {
     title: "Glassdoor",
-    role: "I'll update this later",
+    role: "Data Aggregation Engineer",
+    tech: ["Ruby on Rails", "Tableau", "Javascript"],
     link: "https://glassdoor.com",
-    desc: `notable work included the investment club experience, account creation +
-           authentication, and profiles for individuals and on-chain communities.`,
   },
 ];

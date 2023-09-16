@@ -1,6 +1,7 @@
-import { IItem } from "models";
+import { IEvent } from "models";
+import { Tech } from "./stacks";
 
-export const projects: IItem[] = [
+export const projects: IEvent<(typeof Tech)[number]>[] = [
   {
     title: "Lit Staking",
     role: "Official staking site for LIT Coin",

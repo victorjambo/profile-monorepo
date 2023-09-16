@@ -3,7 +3,7 @@ import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  darkMode: "media",
+  darkMode: "class",
   plugins: [],
   theme: {
     colors: {

@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "../shared/item";
+import Event from "../shared/event";
 import { projects } from "shared-data";
 
 const Projects: React.FC = () => {
@@ -12,9 +12,9 @@ const Projects: React.FC = () => {
 
             <div>
               {projects.map((project, idx) => (
-                <Item
+                <Event
                   key={project.title}
-                  item={project}
+                  event={project}
                   counter={idx + 1}
                   count={projects.length}
                 />

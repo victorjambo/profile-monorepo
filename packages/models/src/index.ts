@@ -1,3 +1,3 @@
 export * from "./IBlog";
-export * from "./IItem";
+export * from "./IEvent";
 export * from "./INavBack";

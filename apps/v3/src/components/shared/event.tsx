@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { IItemProp } from "models";
+import { IEventProp } from "models";
+import { Tech } from "shared-data";
 
-const Item: React.FC<IItemProp> = ({
-  item: { title, role, link, img, desc },
+type Props = IEventProp<(typeof Tech)[number]>;
+
+const Event: React.FC<Props> = ({
+  event: { title, role, link, img, desc, tech },
   counter,
   count,
 }) => {
@@ -25,7 +28,7 @@ const Item: React.FC<IItemProp> = ({
     >
       <a
         href={link}
-        className="grid grid-cols-2 py-4 hover:decoration-dashed hover:decoration-vase hover:underline dark:hover:decoration-slate-300 relative external-link"
+        className="grid grid-cols-2 py-4 relative external-link"
         rel="noopener noreferrer"
         target="_blank"
         onMouseMove={handleMouseMove}
@@ -45,13 +48,31 @@ const Item: React.FC<IItemProp> = ({
         )}
         <div className="font-extrabold">
           <sup className="pr-1">{counter}.</sup>
-          <span>{title}</span>
+          <span className="hover:border-b border-vase dark:border-slate-300 border-dotted">
+            {title}
+          </span>
         </div>
-        <div className="place-self-end text-right">{role}</div>
+        <div
+          className={`hover:border-b border-vase dark:border-slate-300 border-dotted place-self-end text-right ${
+            desc ? "italic" : ""
+          }`}
+        >
+          {role}
+        </div>
       </a>
-      <div className="pb-4 text-justify">{desc}</div>
+      {tech && (
+        <div className="pl-2.5 py-2.5 text-justify text-sm">
+          <span>Tech: </span>
+          <span>{tech.join(", ")}</span>
+        </div>
+      )}
+      {desc && (
+        <div className="pl-2.5 pb-4 text-justify">
+          <div dangerouslySetInnerHTML={{ __html: desc }} />
+        </div>
+      )}
     </div>
   );
 };
 
-export default Item;
+export default Event;
