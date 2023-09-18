@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "globalDotEnv": [".env.development.local"],
+  "globalEnv": ["NODE_ENV", "NEXT_PUBLIC_HOTJAR", "NEXT_PUBLIC_GOOGLE_ANALYTICS"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
