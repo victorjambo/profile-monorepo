@@ -2,7 +2,7 @@
  * In future change these blog post to markdown.
  */
 
-import { IBlog } from "models";
+import type { IBlog } from "models";
 
 export const blogs: IBlog[] = [
   {

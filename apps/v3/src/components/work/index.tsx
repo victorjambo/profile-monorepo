@@ -2,7 +2,7 @@ import React from "react";
 import { works } from "shared-data";
 import Event from "../shared/event";
 
-const Work: React.FC = () => {
+export default function Work(): JSX.Element {
   return (
     <div className="h-fit px-6 md:px-11 pt-11">
       <div className="grid md:grid-cols-2">
@@ -16,10 +16,10 @@ const Work: React.FC = () => {
             <div>
               {works.map((work, idx) => (
                 <Event
-                  key={work.title}
-                  event={work}
-                  counter={idx + 1}
                   count={works.length}
+                  counter={idx + 1}
+                  event={work}
+                  key={work.title}
                 />
               ))}
             </div>
@@ -28,6 +28,4 @@ const Work: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Work;
+}

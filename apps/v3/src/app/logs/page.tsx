@@ -27,16 +27,19 @@ export default function Page(): JSX.Element {
               <div key={blog.id}>
                 {blog.href ? (
                   <a
+                    className="cursor-pointer w-fit hover:border-b border-vase dark:border-slate-300 border-dotted flex items-center space-x-2"
                     href={blog.href}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="cursor-pointer w-fit hover:border-b border-vase dark:border-slate-300 border-dotted flex items-center space-x-2"
                   >
                     <span>• {blog.title}</span>
                     <ArrowUpRightIcon className="w-3 h-3" />
                   </a>
                 ) : (
-                  <Link href={`/logs/${blog.id}`} className="cursor-pointer w-fit hover:border-b border-vase dark:border-slate-300 border-dotted">
+                  <Link
+                    className="cursor-pointer w-fit hover:border-b border-vase dark:border-slate-300 border-dotted"
+                    href={`/logs/${blog.id}`}
+                  >
                     • {blog.title}
                   </Link>
                 )}

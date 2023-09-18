@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import { IEventProp } from "models";
-import { Tech } from "shared-data";
+import type { IEventProp } from "models";
+import type { Tech } from "shared-data";
 
 type Props = IEventProp<(typeof Tech)[number]>;
 
-const Event: React.FC<Props> = ({
+export default function Event({
   event: { title, role, link, img, desc, tech },
   counter,
   count,
-}) => {
+}: Props): JSX.Element {
   const [localCoords, setLocalCoords] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -73,6 +73,4 @@ const Event: React.FC<Props> = ({
       )}
     </div>
   );
-};
-
-export default Event;
+}

@@ -1,11 +1,9 @@
 import { Resume } from "ui";
 
-const ResumeView: React.FC = () => {
+export default function ResumeView(): JSX.Element {
   return (
     <div className="w-full h-screen">
       <Resume />
     </div>
   );
-};
-
-export default ResumeView;
+}

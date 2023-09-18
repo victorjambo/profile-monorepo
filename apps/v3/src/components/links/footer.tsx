@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const FooterLinks: React.FC = () => {
+export default function FooterLinks(): JSX.Element {
   return (
     <div className="flex space-x-6">
       <Link
@@ -18,6 +18,4 @@ const FooterLinks: React.FC = () => {
       </Link>
     </div>
   );
-};
-
-export default FooterLinks;
+}

@@ -16,16 +16,16 @@ const links = [
   },
 ];
 
-const HeaderLinks: React.FC = () => {
+export default function HeaderLinks(): JSX.Element {
   return (
     <div className="flex flex-col w-full items-end">
       {links.map((link) => (
         <a
           className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted flex"
           href={link.link}
+          key={link.title}
           rel="noopener noreferrer"
           target="_blank"
-          key={link.title}
         >
           <span>{link.title}</span>
           <ArrowUpRightIcon className="w-3 h-3" />
@@ -33,6 +33,4 @@ const HeaderLinks: React.FC = () => {
       ))}
     </div>
   );
-};
-
-export default HeaderLinks;
+}

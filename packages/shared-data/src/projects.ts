@@ -1,5 +1,5 @@
-import { IEvent } from "models";
-import { Tech } from "./stacks";
+import type { IEvent } from "models";
+import type { Tech } from "./stacks";
 
 export const projects: IEvent<(typeof Tech)[number]>[] = [
   {

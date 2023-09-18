@@ -12,7 +12,11 @@ const laila = Laila({
   weight: "700",
 });
 
-export default function Page({ params }: { params: { id: string }}): JSX.Element {
+export default function Page({
+  params,
+}: {
+  params: { id: string };
+}): JSX.Element {
   const [blog, setBlog] = useState<IBlog | null>(null);
 
   useEffect(() => {
@@ -28,9 +32,9 @@ export default function Page({ params }: { params: { id: string }}): JSX.Element
   return (
     <main className="w-full relative">
       <div className="h-screen p-6 md:p-11">
-        <NavBack path="/logs" label="logs" />
+        <NavBack label="logs" path="/logs" />
         <HeaderLinks />
-        {blog && (
+        {blog ? (
           <div className="max-w-[65ch]">
             <div
               className={`${laila.className} dark:text-white text-3xl font-bold pb-9`}
@@ -39,12 +43,10 @@ export default function Page({ params }: { params: { id: string }}): JSX.Element
             </div>
 
             <div className="pt-10 flex flex-col space-y-5 leading-7">
-              <p>
-                {blog.description}
-              </p>
+              <p>{blog.description}</p>
             </div>
           </div>
-        )}
+        ) : null}
       </div>
       <div className="absolute bottom-0 w-full">
         <Footer />

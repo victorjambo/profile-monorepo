@@ -1,9 +1,8 @@
 import Script from "next/script";
-import React from "react";
 
 export function Analytics(): JSX.Element {
   return (
-    <React.Fragment>
+    <>
       <Script
         dangerouslySetInnerHTML={{
           __html: `(function(h,o,t,j,a,r){
@@ -33,6 +32,6 @@ export function Analytics(): JSX.Element {
               `,
         }}
       />
-    </React.Fragment>
+    </>
   );
 }

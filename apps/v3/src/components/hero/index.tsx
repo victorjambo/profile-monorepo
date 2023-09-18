@@ -6,24 +6,26 @@ const laila = Laila({
   weight: "700",
 });
 
-const Hero: React.FC = () => {
+export default function Hero(): JSX.Element {
   return (
     <div className="flex flex-col justify-end h-full max-w-lg">
-      <div className={`${laila.className} dark:text-white text-4xl font-bold pb-9`}>
+      <div
+        className={`${laila.className} dark:text-white text-4xl font-bold pb-9`}
+      >
         Victor Mutai
       </div>
       <div className="flex flex-col space-y-4">
         <p>
           Currently building distributed systems at&nbsp;
           <a
-            href="https://iota.org"
             className="border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
+            href="https://iota.org"
             rel="noopener noreferrer"
             target="_blank"
           >
             IOTA Foundation
           </a>
-          &nbsp; An open-source, scalable, feeless, green & permissionless
+          &nbsp; An open-source, scalable, feeless, green & permission less
           distributed ledger.
         </p>
 
@@ -35,6 +37,4 @@ const Hero: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Hero;
+}
