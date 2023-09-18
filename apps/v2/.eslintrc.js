@@ -11,6 +11,8 @@ module.exports = {
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "@next/next/no-img-element": "off",
+    "@next/next/no-head-element": "off"
   }
 };

@@ -1,304 +1,302 @@
 import React from "react";
 
-const FontLoader: React.FC = () => {
+export default function FontLoader(): JSX.Element {
   return (
     <>
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Light.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Medium.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Regular.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Semibold.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Light.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Medium.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Regular.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Semibold.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Light.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Medium.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Regular.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-Semibold.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-LightItalic.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-MediumItalic.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-RegularItalic.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-SemiboldItalic.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-LightItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-MediumItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-RegularItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-SemiboldItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-LightItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-MediumItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-RegularItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/Calibre/Calibre-SemiboldItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Medium.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-MediumItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-RegularItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-SemiboldItalic.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Medium.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Regular.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-RegularItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-SemiboldItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Medium.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Regular.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Semibold.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-SemiboldItalic.woff2"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-MediumItalic.ttf"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
-        href="/fonts/SFMono/SFMono-Regular.woff2"
         as="font"
         crossOrigin=""
+        href="/fonts/SFMono/SFMono-Regular.woff2"
+        rel="preload"
         type="font/woff2"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-Semibold.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
+        as="font"
+        crossOrigin=""
         href="/fonts/SFMono/SFMono-MediumItalic.woff"
-        as="font"
-        crossOrigin=""
+        rel="preload"
         type="font/woff"
       />
       <link
-        rel="preload"
-        href="/fonts/SFMono/SFMono-RegularItalic.ttf"
         as="font"
         crossOrigin=""
+        href="/fonts/SFMono/SFMono-RegularItalic.ttf"
+        rel="preload"
         type="font/ttf"
       />
       <link
-        rel="preload"
-        href="/fonts/SFMono/SFMono-Semibold.woff2"
         as="font"
         crossOrigin=""
+        href="/fonts/SFMono/SFMono-Semibold.woff2"
+        rel="preload"
         type="font/woff2"
       />
     </>
   );
 };
-
-export default FontLoader;

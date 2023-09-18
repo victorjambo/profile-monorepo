@@ -1,11 +1,11 @@
 import FontLoader from "./fontLoader";
-import SEO from "./seo";
+import Seo from "./seo";
 
-const Header: React.FC = () => {
+export default function Header(): JSX.Element {
   return (
     <head>
-      <SEO />
-      <link rel="icon" href="/favicon.ico" />
+      <Seo />
+      <link href="/favicon.ico" rel="icon" />
       <FontLoader />
 
       <script
@@ -40,5 +40,3 @@ const Header: React.FC = () => {
     </head>
   );
 };
-
-export default Header;

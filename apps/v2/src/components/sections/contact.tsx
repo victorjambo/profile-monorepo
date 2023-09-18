@@ -2,14 +2,14 @@
 import { useScrollControl } from "../../context/scrollControl";
 import { DEV_EMAIL } from "../../utils/data";
 
-const ContactSection: React.FC = () => {
+export default function ContactSection(): JSX.Element {
   const { refs } = useScrollControl();
 
   return (
     <section
-      ref={refs?.Contact}
-      id="contact"
       className="max-w-[600px] mx-auto mb-[100px] py-[100px] text-center"
+      id="contact"
+      ref={refs?.Contact}
     >
       <div className="text-sky-500 dark:text-green mb-5 font-mono">04. What&apos;s Next?</div>
       <div className="title font-sans font-semibold text-slate-600 dark:text-slate-lightest leading-[1.1] mb-[10px]">
@@ -21,15 +21,13 @@ const ContactSection: React.FC = () => {
         hi, I&apos;ll try my best to get back to you!
       </p>
       <a
-        href={`mailto:${DEV_EMAIL}`}
         className="text-sky-500 dark:text-green hover:bg-sky-50 dark:hover:bg-green-tint border border-sky-500 dark:border-green py-5 px-7 text-sm font-mono leading-[1] cursor-pointer rounded-md"
-        target="_blank"
+        href={`mailto:${DEV_EMAIL}`}
         rel="noreferrer"
+        target="_blank"
       >
         Say Hello
       </a>
     </section>
   );
 };
-
-export default ContactSection;

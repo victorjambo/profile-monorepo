@@ -45,7 +45,7 @@ export const companies = [
       <li class="list">Build components to manage wallet interactions.</li>
       <li class="list">recruit / build a team of other web3 engineers to work with.</li>
       <li class="list">Architected and implemented robust platforms for managing ERC-20 Tokens, NFTs, and Staking
-      Tokens, optimising security and user experience.</li>
+      Tokens, optimizing security and user experience.</li>
       </ul>`,
   },
   {

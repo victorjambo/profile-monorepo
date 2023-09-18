@@ -13,7 +13,7 @@ export interface IProps {
   };
 }
 
-const Footer: React.FC = () => {
+export default function Footer(): JSX.Element {
   const { theme } = useTheme();
   const gitStats = {
     stars: 0,
@@ -26,22 +26,22 @@ const Footer: React.FC = () => {
       <div className="md:hidden flex flex-row space-x-8 items-center relative w-max">
         {social.map((item) => (
           <a
-            key={item.name}
             href={item.link}
-            target="_blank"
+            key={item.name}
             rel="noreferrer"
+            target="_blank"
           >
             <Image
+              alt={item.name}
+              height={30}
               src={theme === Theme.LIGHT ? item.icons.blue : item.icons.green}
               width={30}
-              height={30}
-              alt={item.name}
             />
           </a>
         ))}
       </div>
       <div className="text-sky-500 dark:text-green font-mono text-xs">
-        <a href={GIT_REPO} className="p-[10px]">
+        <a className="p-[10px]" href={GIT_REPO}>
           <div>
             Built by&nbsp;
             <span className="hover:text-sky-500 dark:hover:text-green">
@@ -56,13 +56,13 @@ const Footer: React.FC = () => {
             </span>
             <span className="inline-flex items-center px-2 space-x-1">
               <Image
+                alt=""
+                className="inline-flex"
+                height={12}
                 src={`/images/social/icons8-git-merge-${
                   theme === Theme.LIGHT ? "blue" : "green"
                 }.png`}
                 width={12}
-                height={12}
-                alt=""
-                className="inline-flex"
               />
               <span>{gitStats.forks}</span>
             </span>
@@ -72,5 +72,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;

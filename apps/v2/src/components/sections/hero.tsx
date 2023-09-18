@@ -1,9 +1,9 @@
 "use client";
 import { DEV_NAME } from "../../utils/data";
 
-const HeroSection: React.FC = () => {
+export default function HeroSection(): JSX.Element {
   return (
-    <section id="hero" className="max-w-[1000px] mx-auto">
+    <section className="max-w-[1000px] mx-auto" id="hero">
       <div className="flex flex-col justify-center min-h-screen">
         <div className="text-sky-500 dark:text-green font-normal mb-5 sm:mb-[30px] mr-[2px] sm:mr-1 ">
           Hi, my name is
@@ -17,22 +17,22 @@ const HeroSection: React.FC = () => {
         <p className="mt-5 max-w-lg font-sans text-slate-600 dark:text-slate leading-[24px]">
           Currently building distributed systems at&nbsp;
           <a
-            href="https://twitter.com/iota"
             className="text-sky-500 dark:text-green cursor-pointer"
-            target="_blank"
+            href="https://twitter.com/iota"
             rel="noreferrer"
+            target="_blank"
           >
             IOTA Foundation
           </a>
-          &nbsp;An open-source, scalable, feeless, green & permissionless
+          &nbsp;An open-source, scalable, feeless, green & permission less
           distributed ledger.
         </p>
         <div className="mt-[50px]">
           <a
-            href="https://resume.github.io/?victorjambo"
-            target="_blank"
             className="text-sky-500 dark:text-green hover:bg-sky-50 dark:hover:bg-green-tint border border-sky-500 dark:border-green rounded py-5 px-7 text-sm cursor-pointer"
+            href="https://resume.github.io/?victorjambo"
             rel="noreferrer"
+            target="_blank"
           >
             Github Resume!
           </a>
@@ -40,6 +40,4 @@ const HeroSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

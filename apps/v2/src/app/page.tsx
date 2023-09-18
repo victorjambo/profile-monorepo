@@ -8,7 +8,7 @@ import ContactSection from "../components/sections/contact";
 import ExperienceSection from "../components/sections/experience";
 import WorkSection from "../components/sections/work";
 
-const Home = () => {
+export default function Home(): JSX.Element {
   return (
     <div>
       <Navbar />
@@ -38,6 +38,4 @@ const Home = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}

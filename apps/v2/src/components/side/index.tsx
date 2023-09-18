@@ -1,15 +1,15 @@
 "use client";
-import { DEV_EMAIL } from "../../utils/data";
 import { useTheme } from "next-themes";
-import { Theme } from "../../utils/constants";
 import { useMemo } from "react";
+import { DEV_EMAIL } from "../../utils/data";
+import { Theme } from "../../utils/constants";
 import GithubIcon from "../icons/github";
 import TwitterIcon from "../icons/twitter";
 import LinkedinIcon from "../icons/linkedin";
 import MediumIcon from "../icons/medium";
 import StackOverflowIcon from "../icons/stackOverflow";
 
-const Side: React.FC = () => {
+export default function Side(): JSX.Element {
   const { theme } = useTheme();
 
   const social = useMemo(() => {
@@ -49,11 +49,11 @@ const Side: React.FC = () => {
         <div className="flex flex-col space-y-2 items-center relative side">
           {social.map((item) => (
             <a
-              key={item.name}
-              href={item.link}
-              target="_blank"
-              rel="noreferrer"
               className="zoom-hover-top py-1"
+              href={item.link}
+              key={item.name}
+              rel="noreferrer"
+              target="_blank"
             >
               {item.icon}
             </a>
@@ -72,17 +72,18 @@ const Side: React.FC = () => {
       </MainComponent>
     </div>
   );
-};
+}
 
-export default Side;
-
-const MainComponent: React.FC<{
+function MainComponent({
+  orientation,
+  children,
+}: {
   orientation: string;
   children: React.ReactNode;
-}> = ({ children, orientation }) => {
+}): JSX.Element {
   return (
     <div className={`fixed bottom-0 z-10 text-slate ${orientation}`}>
       {children}
     </div>
   );
-};
+}

@@ -29,7 +29,7 @@ const defaultCurrentSection = {
   Contact: false,
 };
 
-const Navbar: React.FC = () => {
+export default function Navbar(): JSX.Element {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -61,8 +61,8 @@ const Navbar: React.FC = () => {
     }
   };
 
-  const scrollTo = (name: string) => {
-    let currentRef;
+  const scrollTo = (name: string): void => {
+    let currentRef: React.RefObject<HTMLElement> | undefined;
     switch (name) {
       case "About":
         currentRef = refs?.About;
@@ -93,13 +93,13 @@ const Navbar: React.FC = () => {
       {({ open }) => (
         <>
           <div
-            ref={navRef}
             className={classNames(
               "fixed inset-0 z-30  h-16 sm:h-[100px] shadow-sky-100 dark:shadow-slate-700 bg-opacity-95 dark:bg-opacity-95",
               scrollTop === 0
                 ? ""
                 : "bg-white dark:bg-slate-900 sm:bg-sky-50 sm:dark:bg-slate-800 shadow"
             )}
+            ref={navRef}
           >
             <div className="container mx-auto px-2 sm:px-6 lg:px-8">
               <div className="relative flex items-center justify-between h-16 sm:h-[100px]">
@@ -108,9 +108,9 @@ const Navbar: React.FC = () => {
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XMarkIcon aria-hidden="true" className="block h-6 w-6" />
                     ) : (
-                      <Bars4Icon className="block h-6 w-6" aria-hidden="true" />
+                      <Bars4Icon aria-hidden="true" className="block h-6 w-6" />
                     )}
                   </Disclosure.Button>
                 </div>
@@ -130,14 +130,14 @@ const Navbar: React.FC = () => {
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
                         <a
-                          key={item.name}
-                          onClick={() => handleOnClick(item)}
                           className={classNames(
                             currentSection[item.name]
                               ? "text-sky-500 dark:text-green"
                               : "",
                             "zoom-hover-top px-3 py-2 text-xs hover:text-sky-500 dark:hover:text-green cursor-pointer"
                           )}
+                          key={item.name}
+                          onClick={() => handleOnClick(item)}
                         >
                           <span className="text-sky-500 dark:text-green pr-1">
                             {item.id}.
@@ -157,7 +157,6 @@ const Navbar: React.FC = () => {
             <div className="px-2 pt-4 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Disclosure.Button
-                  key={item.name}
                   as="a"
                   className={classNames(
                     currentSection[item.name]
@@ -165,6 +164,7 @@ const Navbar: React.FC = () => {
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
+                  key={item.name}
                 >
                   <span className="text-green pr-1">{item.id}.</span>
                   <span>{item.name}</span>
@@ -176,6 +176,4 @@ const Navbar: React.FC = () => {
       )}
     </Disclosure>
   );
-};
-
-export default Navbar;
+}

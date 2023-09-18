@@ -1,4 +1,4 @@
-const SEO: React.FC = () => {
+export default function Seo(): JSX.Element {
   const title = "Victor Mutai";
   const description = "Victor Mutai Senior Software Engineer";
   const twitter = "victor_jambo";
@@ -6,55 +6,53 @@ const SEO: React.FC = () => {
 
   return (
     <>
-      <meta name="description" content={description} />
-      <meta name="keywords" content="victor, mutai, web3, engineer" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content={title} />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:creator" content={twitter} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image0" content={image} />
+      <meta content={description} name="description" />
+      <meta content="victor, mutai, web3, engineer" name="keywords" />
+      <meta content="website" property="og:type" />
+      <meta content={title} property="og:title" />
+      <meta content={description} property="og:description" />
+      <meta content={image} property="og:image" />
+      <meta content={title} property="og:site_name" />
+      <meta content="summary" property="twitter:card" />
+      <meta content={twitter} property="twitter:creator" />
+      <meta content={title} property="twitter:title" />
+      <meta content={description} property="twitter:description" />
+      <meta content={image} property="twitter:image0" />
 
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-touch-fullscreen" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="theme-color" content="#0f172a" />
+      <meta content="yes" name="mobile-web-app-capable" />
+      <meta content="yes" name="apple-touch-fullscreen" />
+      <meta content="yes" name="apple-mobile-web-app-capable" />
+      <meta content="default" name="apple-mobile-web-app-status-bar-style" />
+      <meta content="#0f172a" name="theme-color" />
 
-      <link rel="manifest" href="/manifest.json" />
+      <link href="/manifest.json" rel="manifest" />
 
       <link
+        href="/images/icons/apple-icon-180x180.png"
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/images/icons/apple-icon-180x180.png"
       />
       <link
+        href="/images/icons/apple-icon-192x192.png"
         rel="apple-touch-icon"
         sizes="192x192"
-        href="/images/icons/apple-icon-192x192.png"
       />
       <link
+        href="/images/icons/apple-icon-512x512.png"
         rel="apple-touch-icon"
         sizes="512x512"
-        href="/images/icons/apple-icon-512x512.png"
       />
 
       <link
-        rel="apple-touch-startup-image"
-        media="(orientation: portrait)"
         href="/images/icons/apple-splash-1125-2436.png"
+        media="(orientation: portrait)"
+        rel="apple-touch-startup-image"
       />
       <link
-        rel="apple-touch-startup-image"
-        media="(orientation: landscape)"
         href="/images/icons/apple-splash-2436-1125.png"
+        media="(orientation: landscape)"
+        rel="apple-touch-startup-image"
       />
     </>
   );
-};
-
-export default SEO;
+}

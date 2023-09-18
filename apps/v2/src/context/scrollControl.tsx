@@ -1,5 +1,5 @@
-"use client"
-import type { RefObject} from "react";
+"use client";
+import type { RefObject } from "react";
 import { createContext, useContext, useRef } from "react";
 
 interface IRefs {
@@ -7,7 +7,7 @@ interface IRefs {
   Experience: RefObject<HTMLElement> | undefined;
   Work: RefObject<HTMLElement> | undefined;
   Contact: RefObject<HTMLElement> | undefined;
-};
+}
 
 interface IScrollControlProps {
   refs: IRefs;
@@ -19,9 +19,11 @@ const ScrollControlContext = createContext<Partial<IScrollControlProps>>({});
 export const useScrollControl = (): Partial<IScrollControlProps> =>
   useContext(ScrollControlContext);
 
-const ScrollControlProvider: React.FC<{ children: React.ReactNode }> = ({
+export default function ScrollControlProvider({
   children,
-}) => {
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const workRef = useRef<HTMLElement>(null);
@@ -54,5 +56,4 @@ const ScrollControlProvider: React.FC<{ children: React.ReactNode }> = ({
       {children}
     </ScrollControlContext.Provider>
   );
-};
-export default ScrollControlProvider;
+}

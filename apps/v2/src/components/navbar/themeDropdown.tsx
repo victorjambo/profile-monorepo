@@ -10,7 +10,7 @@ import {
 import { Theme } from "../../utils/constants";
 import { classNames } from "../../utils/classNames";
 
-const ThemeDropdown: React.FC = () => {
+export default function ThemeDropdown(): JSX.Element {
   const { theme, setTheme, systemTheme } = useTheme();
   let Icon;
 
@@ -103,5 +103,3 @@ const ThemeDropdown: React.FC = () => {
     </Menu>
   );
 };
-
-export default ThemeDropdown;

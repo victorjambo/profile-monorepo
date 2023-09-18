@@ -2,10 +2,10 @@
 import { ThemeProvider } from "next-themes";
 import ScrollControlProvider from "../context/scrollControl";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ScrollControlProvider>
-      <ThemeProvider defaultTheme="dark" attribute="class" storageKey="theme">
+      <ThemeProvider attribute="class" defaultTheme="dark" storageKey="theme">
         {children}
       </ThemeProvider>
     </ScrollControlProvider>
