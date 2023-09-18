@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-head-element */
 import FontLoader from "./fontLoader";
 import SEO from "./seo";
 

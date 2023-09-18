@@ -1,11 +1,11 @@
 "use client"
 import Image from "next/image";
-import { DEV_NAME, GIT_REPO, social } from "../../utils/data";
 import { StarIcon } from "@heroicons/react/24/outline";
 import { useTheme } from "next-themes";
+import { DEV_NAME, GIT_REPO, social } from "../../utils/data";
 import { Theme } from "../../utils/constants";
 
-interface IProps {
+export interface IProps {
   gitStats: {
     stars: number;
     forks: number;

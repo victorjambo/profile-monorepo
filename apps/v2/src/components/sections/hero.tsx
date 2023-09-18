@@ -24,15 +24,18 @@ const HeroSection: React.FC = () => {
           >
             IOTA Foundation
           </a>
-          &nbsp;An open-source, scalable, feeless, green & permissionless distributed ledger.
+          &nbsp;An open-source, scalable, feeless, green & permissionless
+          distributed ledger.
         </p>
         <div className="mt-[50px]">
-        <button
+          <a
+            href="https://resume.github.io/?victorjambo"
+            target="_blank"
             className="text-sky-500 dark:text-green hover:bg-sky-50 dark:hover:bg-green-tint border border-sky-500 dark:border-green rounded py-5 px-7 text-sm cursor-pointer"
-            onClick={() => console.log("1dsfsdfsdfsd")}
+            rel="noreferrer"
           >
             Github Resume!
-          </button>
+          </a>
         </div>
       </div>
     </section>

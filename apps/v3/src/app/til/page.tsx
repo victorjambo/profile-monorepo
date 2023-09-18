@@ -1,10 +1,7 @@
-import { blogs } from "shared-data";
-import Footer from "../../components/footer";
 import { Laila } from "next/font/google";
-import HeaderLinks from "../../components/links/header";
-import Link from "next/link";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { NavBack } from "ui";
+import HeaderLinks from "../../components/links/header";
+import Footer from "../../components/footer";
 
 const laila = Laila({
   subsets: ["latin"],

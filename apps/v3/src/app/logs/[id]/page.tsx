@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Laila } from "next/font/google";
 import { blogs } from "shared-data";
-import { IBlog } from "models";
+import type { IBlog } from "models";
 import { NavBack } from "ui";
 import HeaderLinks from "../../../components/links/header";
 import Footer from "../../../components/footer";
@@ -18,7 +18,7 @@ export default function Page({ params }: { params: { id: string }}): JSX.Element
   useEffect(() => {
     const blogId = params.id;
     if (blogId) {
-      const _blog = blogs.find((_blog) => _blog.id === Number(blogId));
+      const _blog = blogs.find((b) => b.id === Number(blogId));
       if (_blog) {
         setBlog(_blog);
       }

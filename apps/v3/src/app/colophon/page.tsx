@@ -23,7 +23,7 @@ export default function Page(): JSX.Element {
 
           <div className="py-1.5 pl-4 border-l-4 border-gray-900 dark:border-white">
             <blockquote>
-              A <i>colophon</i> is a designer word for 'how this site was made'
+              A <i>colophon</i> is a designer word for &apos;how this site was made&apos;
             </blockquote>
           </div>
 

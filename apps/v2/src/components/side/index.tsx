@@ -62,7 +62,10 @@ const Side: React.FC = () => {
       </MainComponent>
       <MainComponent orientation="right-10">
         <div className="flex flex-col items-center relative side text-sky-500 dark:text-green">
-          <a className="my-5 p-[10px] font-mono text-xs tracking-widest [writing-mode:vertical-rl] cursor-pointer zoom-hover-center">
+          <a
+            className="my-5 p-[10px] font-mono text-xs tracking-widest [writing-mode:vertical-rl] cursor-pointer zoom-hover-center"
+            href={`mailto:${DEV_EMAIL}`}
+          >
             {DEV_EMAIL}
           </a>
         </div>

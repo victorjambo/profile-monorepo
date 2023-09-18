@@ -1,12 +1,12 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ThemeDropdown from "./themeDropdown";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { classNames } from "../../utils/classNames";
 import { useScrollControl } from "../../context/scrollControl";
+import ThemeDropdown from "./themeDropdown";
 
 interface INav {
   id: string;

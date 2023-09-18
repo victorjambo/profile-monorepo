@@ -1,7 +1,8 @@
 "use client"
-import { createContext, RefObject, useContext, useRef } from "react";
+import type { RefObject} from "react";
+import { createContext, useContext, useRef } from "react";
 
-type IRefs = {
+interface IRefs {
   About: RefObject<HTMLElement> | undefined;
   Experience: RefObject<HTMLElement> | undefined;
   Work: RefObject<HTMLElement> | undefined;

@@ -1,5 +1,5 @@
 "use client";
-import { SectionHeader } from "../../components/sections";
+import { SectionHeader } from "./index";
 import { useScrollControl } from "../../context/scrollControl";
 import { aboutMe, technologies } from "../../utils/data";
 import Image from "next/image";

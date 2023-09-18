@@ -1,5 +1,4 @@
 "use client"
-/* eslint-disable @next/next/no-img-element */
 import { useScrollControl } from "../../context/scrollControl";
 import { Theme } from "../../utils/constants";
 import { projects } from "../../utils/data";
