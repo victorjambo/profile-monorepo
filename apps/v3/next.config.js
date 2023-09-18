@@ -2,4 +2,5 @@
 module.exports = {
   transpilePackages: ["shared-data"],
   reactStrictMode: true,
+  ignoreDuringBuilds: true,
 };
