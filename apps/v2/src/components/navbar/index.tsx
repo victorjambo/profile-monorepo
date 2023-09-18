@@ -1,7 +1,7 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { classNames } from "../../utils/classNames";
@@ -43,15 +43,24 @@ export default function Navbar(): JSX.Element {
   const { scrollInto, refs } = useScrollControl();
 
   useEffect(() => {
-    const onScroll = (e: any) => {
-      setScrollTop(e.target.documentElement.scrollTop);
+    const onScroll = (e: Event): void => {
+      const target = e.target as unknown as {
+        documentElement: { scrollTop: number };
+      };
+      setScrollTop(target.documentElement.scrollTop);
     };
     window.addEventListener("scroll", onScroll);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
-  const handleOnClick = (item: INav) => {
+  const handleOnClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    item: INav
+  ): void => {
+    e.preventDefault();
     if (item.link) {
       router.push(item.link);
     } else if (pathname === "/blog") {
@@ -136,8 +145,11 @@ export default function Navbar(): JSX.Element {
                               : "",
                             "zoom-hover-top px-3 py-2 text-xs hover:text-sky-500 dark:hover:text-green cursor-pointer"
                           )}
+                          href="/"
                           key={item.name}
-                          onClick={() => handleOnClick(item)}
+                          onClick={(e) => {
+                            handleOnClick(e, item);
+                          }}
                         >
                           <span className="text-sky-500 dark:text-green pr-1">
                             {item.id}.

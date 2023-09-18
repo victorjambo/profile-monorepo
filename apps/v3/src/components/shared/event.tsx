@@ -12,7 +12,9 @@ export default function Event({
 }: Props): JSX.Element {
   const [localCoords, setLocalCoords] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleMouseMove = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ): void => {
     if (!img) return;
     setLocalCoords({
       x: event.clientX,
@@ -27,17 +29,17 @@ export default function Event({
       }`}
     >
       <a
-        href={link}
         className="grid grid-cols-2 py-4 relative external-link"
+        href={link}
+        onMouseMove={handleMouseMove}
         rel="noopener noreferrer"
         target="_blank"
-        onMouseMove={handleMouseMove}
       >
-        {img && (
+        {img ? (
           <img
-            src={img}
             alt={title}
             className="external-link-img absolute z-10 shadow-lg"
+            src={img}
             style={{
               left: `${localCoords.x}px`,
               ...(counter === count || counter === count - 1
@@ -45,7 +47,7 @@ export default function Event({
                 : { top: "0px" }),
             }}
           />
-        )}
+        ) : null}
         <div className="font-extrabold">
           <sup className="pr-1">{counter}.</sup>
           <span className="hover:border-b border-vase dark:border-slate-300 border-dotted">
@@ -60,17 +62,17 @@ export default function Event({
           {role}
         </div>
       </a>
-      {tech && (
+      {tech ? (
         <div className="pl-2.5 py-2.5 text-justify text-sm">
           <span>Tech: </span>
           <span>{tech.join(", ")}</span>
         </div>
-      )}
-      {desc && (
+      ) : null}
+      {desc ? (
         <div className="pl-2.5 pb-4 text-justify">
           <div dangerouslySetInnerHTML={{ __html: desc }} />
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

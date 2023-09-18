@@ -1,18 +1,7 @@
 "use client";
 import type { RefObject } from "react";
 import { createContext, useContext, useRef } from "react";
-
-interface IRefs {
-  About: RefObject<HTMLElement> | undefined;
-  Experience: RefObject<HTMLElement> | undefined;
-  Work: RefObject<HTMLElement> | undefined;
-  Contact: RefObject<HTMLElement> | undefined;
-}
-
-interface IScrollControlProps {
-  refs: IRefs;
-  scrollInto: (ref: RefObject<HTMLElement> | undefined) => void;
-}
+import type { IScrollControlProps } from "./type";
 
 const ScrollControlContext = createContext<Partial<IScrollControlProps>>({});
 
@@ -36,8 +25,8 @@ export default function ScrollControlProvider({
     Contact: contactRef,
   };
 
-  const scrollInto = (ref: RefObject<HTMLElement> | undefined) => {
-    if (ref && ref.current) {
+  const scrollInto = (ref: RefObject<HTMLElement> | undefined): void => {
+    if (ref?.current) {
       ref.current.scrollIntoView({
         behavior: "smooth",
         block: "center",

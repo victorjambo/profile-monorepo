@@ -67,7 +67,7 @@ export default function BlogView(): JSX.Element {
                 <p className="text-sm text-gray-500">
                   <time dateTime={post.datetime}>{post.date}</time>
                 </p>
-                <a className="mt-2 block" href="#">
+                <a className="mt-2 block" href={post.href}>
                   <p className="text-xl font-semibold">{post.title}</p>
                   <p className="mt-3 text-base text-gray-500">
                     {post.description}

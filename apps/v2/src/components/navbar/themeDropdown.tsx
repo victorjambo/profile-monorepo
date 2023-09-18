@@ -12,7 +12,12 @@ import { classNames } from "../../utils/classNames";
 
 export default function ThemeDropdown(): JSX.Element {
   const { theme, setTheme, systemTheme } = useTheme();
-  let Icon;
+  let Icon: React.ForwardRefExoticComponent<
+    Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+      title?: string | undefined;
+      titleId?: string | undefined;
+    } & React.RefAttributes<SVGSVGElement>
+  >;
 
   switch (theme) {
     case Theme.LIGHT:
@@ -57,7 +62,11 @@ export default function ThemeDropdown(): JSX.Element {
                     : "text-gray-700 dark:text-slate-300",
                   "px-4 py-2 text-sm flex flex-row space-x-2 cursor-pointer"
                 )}
-                onClick={() => setTheme(Theme.LIGHT)}
+                onClick={() => {
+                  setTheme(Theme.LIGHT);
+                }}
+                role="button"
+                tabIndex={0}
               >
                 <SunIcon className="w-5 h-5" />
                 <span>Light</span>
@@ -74,7 +83,11 @@ export default function ThemeDropdown(): JSX.Element {
                     : "text-sky-500 dark:text-green",
                   "px-4 py-2 text-sm flex flex-row space-x-2 cursor-pointer"
                 )}
-                onClick={() => setTheme(Theme.DARK)}
+                onClick={() => {
+                  setTheme(Theme.DARK);
+                }}
+                role="button"
+                tabIndex={0}
               >
                 <MoonIcon className="w-5 h-5" />
                 <span>Dark</span>
@@ -91,7 +104,11 @@ export default function ThemeDropdown(): JSX.Element {
                     : "text-gray-700 dark:text-slate-300",
                   "px-4 py-2 text-sm flex flex-row space-x-2 cursor-pointer"
                 )}
-                onClick={() => setTheme(Theme.SYSTEM)}
+                onClick={() => {
+                  setTheme(Theme.SYSTEM);
+                }}
+                role="button"
+                tabIndex={0}
               >
                 <ComputerDesktopIcon className="w-5 h-5" />
                 <span>System</span>
@@ -102,4 +119,4 @@ export default function ThemeDropdown(): JSX.Element {
       </Transition>
     </Menu>
   );
-};
+}

@@ -27,7 +27,7 @@ export default function Page({
         setBlog(_blog);
       }
     }
-  }, []);
+  }, [params.id]);
 
   return (
     <main className="w-full relative">
