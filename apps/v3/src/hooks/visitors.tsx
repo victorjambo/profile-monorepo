@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, getDoc, doc, updateDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  updateDoc,
+  setDoc,
+  getDoc,
+} from "firebase/firestore";
 import { useCallback, useEffect } from "react";
 
 const firebaseConfig = {
@@ -12,19 +18,26 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 } as const;
 
-export const useVisitors = (): void => {
+export const useVisitors = (path: string): void => {
   const visitors = useCallback(async () => {
+    const documentId = `resume-${path}`;
     const firebaseApp = initializeApp(firebaseConfig);
     const firestore = getFirestore(firebaseApp);
 
-    const resumeRef = doc(firestore, "v2", "resume");
-    const snap = await getDoc(resumeRef);
+    const docRef = doc(firestore, "v3", documentId);
+    const snap = await getDoc(docRef);
     const counter = snap.data() as { count: number } | undefined;
 
     try {
-      await updateDoc(resumeRef, {
-        count: counter ? counter.count + 1 : 1,
-      });
+      if (counter) {
+        await updateDoc(docRef, {
+          count: counter.count + 1,
+        });
+      } else {
+        await setDoc(docRef, {
+          count: 1,
+        });
+      }
     } catch {
       // silent fail
     }
@@ -32,6 +45,7 @@ export const useVisitors = (): void => {
 
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") return;
+    if (!path) return;
     void visitors();
-  }, [visitors]);
+  }, [visitors, path]);
 };

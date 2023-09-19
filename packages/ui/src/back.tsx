@@ -2,9 +2,13 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import type { INavBack } from "models";
 
-export function NavBack({ path, label }: INavBack): JSX.Element {
+export function NavBack({ path, label, color = false }: INavBack): JSX.Element {
   return (
-    <div className="ui-p-10 ui-absolute ui-top-0 ui-left-0">
+    <div
+      className={`ui-p-10 ui-absolute ui-top-0 ui-left-0 ${
+        color ? "ui-text-white" : ""
+      }`}
+    >
       <div className="ui-flex ui-items-center ui-space-x-1">
         <ArrowLeftIcon className="ui-w-5 ui-h-5" />
         <Link

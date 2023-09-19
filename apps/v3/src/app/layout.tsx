@@ -19,7 +19,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <Analytics />
+      {process.env.NODE_ENV === "production" && <Analytics />}
 
       <body
         className={`${comfortaa.className} light old-text-serket dark:text-slate-300 old-bg-summer dark:bg-gray-900 bg-cover bg-fixed`}

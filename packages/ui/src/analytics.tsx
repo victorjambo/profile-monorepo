@@ -3,6 +3,7 @@ import Script from "next/script";
 export function Analytics(): JSX.Element {
   return (
     <>
+      <Script src="/scripts/debugger.js" />
       <Script
         dangerouslySetInnerHTML={{
           __html: `(function(h,o,t,j,a,r){

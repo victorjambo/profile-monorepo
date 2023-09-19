@@ -24,12 +24,12 @@ export default function Event({
 
   return (
     <div
-      className={` ${
+      className={`${
         counter === count ? "" : "border-b dark:border-slate-300"
       }`}
     >
       <a
-        className="grid grid-cols-2 py-4 relative external-link"
+        className="grid grid-cols-2 py-10 md:py-4 relative external-link"
         href={link}
         onMouseMove={handleMouseMove}
         rel="noopener noreferrer"
@@ -63,13 +63,13 @@ export default function Event({
         </div>
       </a>
       {tech ? (
-        <div className="pl-2.5 py-2.5 text-justify text-sm">
+        <div className="pl-2.5 pb-10 md:py-2.5 text-left md:text-justify text-sm">
           <span>Tech: </span>
           <span>{tech.join(", ")}</span>
         </div>
       ) : null}
       {desc ? (
-        <div className="pl-2.5 pb-4 text-justify">
+        <div className="pl-2.5 pb-10 md:pb-4 text-left md:text-justify">
           <div dangerouslySetInnerHTML={{ __html: desc }} />
         </div>
       ) : null}
