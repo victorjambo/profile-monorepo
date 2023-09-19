@@ -2,7 +2,7 @@
 
 export default function ResumeView(): JSX.Element {
   return (
-    <div className="w-full h-screen">
+    <div className="">
       {/* <Resume /> */}
       hello world
     </div>
