@@ -1,5 +1,6 @@
 import { Laila } from "next/font/google";
 import { NavBack } from "ui";
+import { Tech } from "shared-data";
 import Footer from "../../components/footer";
 import HeaderLinks from "../../components/links/header";
 
@@ -30,12 +31,14 @@ export default function Page(): JSX.Element {
           <div className="py-5 flex flex-col space-y-5 leading-7">
             Here are a few of the tools I used to put this site together:
             <ul className="pl-6">
-              <li>• NextJS</li>
-              <li>• ReactJS</li>
-              <li>• Turborepo</li>
-              <li>• Tailwindcss</li>
-              <li>• Netlify</li>
-              <li>• Vercel</li>
+              <li>• {Tech[10]}</li>
+              <li>• {Tech[0]}</li>
+              <li>• {Tech[37]}</li>
+              <li>• {Tech[13]}</li>
+              <li>• {Tech[39]}</li>
+              <li>• {Tech[40]}</li>
+              <li>• {Tech[38]}</li>
+              <li>• {Tech[35]}/{Tech[36]}</li>
             </ul>
           </div>
         </div>

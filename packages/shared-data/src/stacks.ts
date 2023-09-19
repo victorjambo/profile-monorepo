@@ -36,4 +36,8 @@ export const Tech = [
   "PostgreSQL",
   "firebase",
   "firestore",
+  "Turborepo",
+  "MDX",
+  "netlify",
+  "vercel"
 ] as const;

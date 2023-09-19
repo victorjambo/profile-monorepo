@@ -3,7 +3,6 @@ import { Disclosure } from "@headlessui/react";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
 import { classNames } from "../../utils/classNames";
 import { useScrollControl } from "../../context/scrollControl";
 import ThemeDropdown from "./themeDropdown";
@@ -19,7 +18,7 @@ const navigation: INav[] = [
   { id: "02", name: "Experience" },
   { id: "03", name: "Work" },
   { id: "04", name: "Contact" },
-  { id: "05", name: "Blog", link: "/blog" },
+  { id: "05", name: "WIP", link: "https://profile-monorepo-v3.vercel.app" },
 ];
 
 const defaultCurrentSection = {
@@ -30,9 +29,6 @@ const defaultCurrentSection = {
 };
 
 export default function Navbar(): JSX.Element {
-  const router = useRouter();
-  const pathname = usePathname();
-
   const [scrollTop, setScrollTop] = useState(0);
   const [currentSection, setCurrentSection] = useState<Record<string, boolean>>(
     defaultCurrentSection
@@ -60,12 +56,8 @@ export default function Navbar(): JSX.Element {
     e: React.MouseEvent<HTMLAnchorElement>,
     item: INav
   ): void => {
-    e.preventDefault();
-    if (item.link) {
-      router.push(item.link);
-    } else if (pathname === "/blog") {
-      router.push("/");
-    } else {
+    if (!item.link) {
+      e.preventDefault();
       scrollTo(item.name);
     }
   };
@@ -145,11 +137,13 @@ export default function Navbar(): JSX.Element {
                               : "",
                             "zoom-hover-top px-3 py-2 text-xs hover:text-sky-500 dark:hover:text-green cursor-pointer"
                           )}
-                          href="/"
+                          href={item.link ?? "/"}
                           key={item.name}
                           onClick={(e) => {
                             handleOnClick(e, item);
                           }}
+                          rel="noopener"
+                          target="_blank"
                         >
                           <span className="text-sky-500 dark:text-green pr-1">
                             {item.id}.
