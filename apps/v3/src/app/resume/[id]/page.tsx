@@ -10,7 +10,7 @@ export default function ResumeView({
   useVisitors(params.id);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen bg-[#1d1d1d]">
       <NavBack color />
       <Resume />
     </div>
