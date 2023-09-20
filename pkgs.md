@@ -19,6 +19,14 @@
 
 ## Imports
 
+### `v2`
+  - eslint-config-custom
+  - models
+  - shared-data
+  - tailwind-config
+  - tsconfig
+  - ui
+
 ### `v3`
   - eslint-config-custom
   - models
