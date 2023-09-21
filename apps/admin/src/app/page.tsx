@@ -9,7 +9,11 @@ const laila = Laila({
 });
 
 export default function Page(): JSX.Element {
-  const {visits, sinceLastVisit, visited} = useVisitors();
+  const {
+    v2: { visits, sinceLastVisit, visited },
+    v3,
+  } = useVisitors();
+
   return (
     <main className="w-full relative">
       <div className="h-screen p-6 md:p-11">
@@ -18,20 +22,40 @@ export default function Page(): JSX.Element {
             Admin
           </div>
 
-          <div className="text-lg font-bold pt-10 pb-4">V2</div>
+          <div className="text-xl font-bold pt-10 pb-4">V2</div>
           <div className=" flex flex-col space-y-5 leading-7">
-            <div className="w-full">• <b>Visits</b>: {visits}</div>
-            <div className="w-full">• <b>Last visitor</b>: {visited}</div>
-            <div className="w-full">• <b>Time Since Last Visit</b>: {sinceLastVisit}</div>
+            <div className="w-full">
+              • <b>Visits</b>: {visits}
+            </div>
+            <div className="w-full">
+              • <b>Last visitor</b>: {visited}
+            </div>
+            <div className="w-full">
+              • <b>Time Since Last Visit</b>: {sinceLastVisit}
+            </div>
           </div>
 
-          {/* V3 */}
-          {/* <div className="text-lg font-bold pt-10 pb-4">V3</div>
-          <div className=" flex flex-col space-y-5 leading-7">
-            <div className="w-full">• <b>Visits</b>: {"visits"}</div>
-            <div className="w-full">• <b>Last visitor</b>: {"visited"}</div>
-            <div className="w-full">• <b>Time Since Last Visit</b>: {"sinceLastVisit"}</div>
-          </div> */}
+          {v3.length ? (
+            <>
+              <div className="text-xl font-bold pt-10 pb-4">V3</div>
+              {v3.map((data) => (
+                <div key={data.path}>
+                  <div className="text-lg font-bold pb-2">{data.path}</div>
+                  <div className="flex flex-col space-y-5 leading-7">
+                    <div className="w-full">
+                      • <b>Visits</b>: {data.visits}
+                    </div>
+                    <div className="w-full">
+                      • <b>Last visitor</b>: {data.visited}
+                    </div>
+                    <div className="w-full">
+                      • <b>Time Since Last Visit</b>: {data.sinceLastVisit}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </>
+          ) : null}
         </div>
       </div>
     </main>
