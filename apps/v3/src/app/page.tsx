@@ -5,13 +5,14 @@ import Work from "../components/work";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
 import Projects from "../components/projects";
-// import { useVisitors } from "../hooks/visitors";
+import { useReferer } from "../hooks/referer";
 
-export default function Page(): JSX.Element {
-  // useVisitors("/", {
-  //   isLogged: true,
-  //   query: searchParams?.source
-  // });
+export default function Page({
+  searchParams,
+}: {
+  searchParams?: { source: string };
+}): JSX.Element {
+  useReferer(searchParams);
 
   return (
     <main className="w-full">

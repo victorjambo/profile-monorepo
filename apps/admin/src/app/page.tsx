@@ -38,9 +38,11 @@ export default function Page(): JSX.Element {
           {v3.length ? (
             <>
               <div className="text-xl font-bold pt-10 pb-4">V3</div>
-              {v3.map((data) => (
-                <div key={data.path}>
-                  <div className="text-lg font-bold pb-2">{data.path}</div>
+              {v3.map((data, i) => (
+                <div key={data.path} className="pt-6">
+                  <div className="text-lg font-bold pb-2">
+                    <sup>{i+1}.</sup>
+                    <span className="pl-2 underline">{data.path}</span></div>
                   <div className="flex flex-col space-y-5 leading-7">
                     <div className="w-full">
                       • <b>Visits</b>: {data.visits}

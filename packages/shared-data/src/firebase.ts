@@ -16,5 +16,6 @@ export const Collections = {
   v3: {
     name: process.env.NEXT_PUBLIC_V3_COLLECTION ?? "v3",
     document: process.env.NEXT_PUBLIC_V3_DOCUMENT ?? "resume-",
+    referer: process.env.NEXT_PUBLIC_V3_DOCUMENT_REFERER ?? "source-wip",
   },
 } as const;

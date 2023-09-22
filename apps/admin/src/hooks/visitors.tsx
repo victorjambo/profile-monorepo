@@ -49,20 +49,26 @@ export const useVisitors = (): ResponseData => {
     v3Snapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
       const v3data = doc.data() as FirebaseResponse<Timestamp>;
-      _data.push({
-        path: doc.id,
-        visits: v3data.count,
-        sinceLastVisit: moment(v3data.updated.toDate()).from(
-          v3data.created.toDate()
-        ),
-        visited: moment(v3data.created.toDate()).fromNow(),
-      });
+      console.log("🚀", doc.id);
+      if (Boolean(v3data.count)) {
+        _data.push({
+          path: doc.id,
+          visits: v3data.count,
+          sinceLastVisit:
+            v3data.created && v3data.updated
+              ? moment(v3data.updated.toDate()).from(v3data.created.toDate())
+              : "",
+          visited: v3data.created
+            ? moment(v3data.created.toDate()).fromNow()
+            : "",
+        });
+      }
     });
     setV3Data(_data);
   }, []);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== "production") return;
+    // if (process.env.NODE_ENV !== "production") return;
     void visitors();
   }, [visitors]);
 
