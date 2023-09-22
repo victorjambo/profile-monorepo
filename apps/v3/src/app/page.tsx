@@ -12,7 +12,10 @@ export default function Page({
 }: {
   searchParams?: { source: string };
 }): JSX.Element {
-  useVisitors("/", searchParams?.source);
+  useVisitors("/", {
+    isLogged: true,
+    query: searchParams?.source
+  });
 
   return (
     <main className="w-full">

@@ -11,7 +11,10 @@ import { useCallback, useEffect } from "react";
 import type { FirebaseCounter } from "models";
 import { Collections, Config } from "shared-data";
 
-export const useVisitors = (path: string, search?: string): void => {
+export const useVisitors = (
+  path: string,
+  search?: { isLogged: boolean; query?: string }
+): void => {
   const visitors = useCallback(async () => {
     let documentId = `${Collections.v3.document}${path}`;
     if (search) {
@@ -44,6 +47,7 @@ export const useVisitors = (path: string, search?: string): void => {
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") return;
     if (!path) return;
+    if (search && search.isLogged && !search.query) return;
     void visitors();
-  }, [visitors, path]);
+  }, [visitors, path, search]);
 };
