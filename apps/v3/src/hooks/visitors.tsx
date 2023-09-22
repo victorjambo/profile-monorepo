@@ -11,9 +11,12 @@ import { useCallback, useEffect } from "react";
 import type { FirebaseCounter } from "models";
 import { Collections, Config } from "shared-data";
 
-export const useVisitors = (path: string): void => {
+export const useVisitors = (path: string, search?: string): void => {
   const visitors = useCallback(async () => {
-    const documentId = `${Collections.v3.document}${path}`;
+    let documentId = `${Collections.v3.document}${path}`;
+    if (search) {
+      documentId = "source-wip";
+    }
     const firebaseApp = initializeApp(Config);
     const firestore = getFirestore(firebaseApp);
 

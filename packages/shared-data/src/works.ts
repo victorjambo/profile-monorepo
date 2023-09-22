@@ -15,8 +15,7 @@ export const works: IEvent<(typeof Tech)[number]>[] = [
     link: "https://syndicate.io",
     tech: ["React", "TypeScript", "Next.js", "GraphQL", "web3"],
     desc: `spent 2 years building web3 investments products and features.
-           <br />
-           notable work included the 
+           Notable work included the 
            <a
             rel="noopener noreferrer"
             target="_blank"
@@ -31,19 +30,21 @@ export const works: IEvent<(typeof Tech)[number]>[] = [
     role: "Fullstack Software Engineer, Payments",
     link: "https://prezi.com",
     tech: ["Python", "Django", "React", "TypeScript", "ETL"],
-    desc: `notable work included the investment club experience, account creation +
-           authentication, and profiles for individuals and on-chain communities.`,
+    desc: `build and manage microservices to handle Payments and user signup.
+            Handled payments with tools like Zuora and Braintree`,
   },
   {
     title: "Andela",
     role: "Fullstack Software Engineer",
     tech: ["React", "Python", "Flask", "Node.js"],
     link: "https://andela.com",
+    desc: `worked with cross functional teams to build Andela social platform`
   },
   {
     title: "Glassdoor",
     role: "Data Aggregation Engineer",
     tech: ["Ruby on Rails", "Tableau", "Javascript"],
     link: "https://glassdoor.com",
+    desc: `Manage web crawlers, and build ETLs`
   },
 ];

@@ -1,6 +1,5 @@
-import React from "react";
 import { projects } from "shared-data";
-import Event from "../shared/event";
+import ProjectEvent from "../shared/project-event";
 
 export default function Projects(): JSX.Element {
   return (
@@ -14,7 +13,7 @@ export default function Projects(): JSX.Element {
 
             <div>
               {projects.map((project, idx) => (
-                <Event
+                <ProjectEvent
                   count={projects.length}
                   counter={idx + 1}
                   event={project}
