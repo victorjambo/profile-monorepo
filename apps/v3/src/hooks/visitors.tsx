@@ -45,7 +45,7 @@ export const useVisitors = (
   }, []);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== "production") return;
+    // if (process.env.NODE_ENV !== "production") return;
     if (!path) return;
     if (search && search.isLogged && !search.query) return;
     void visitors();
