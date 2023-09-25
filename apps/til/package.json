@@ -1,0 +1,35 @@
+{
+  "name": "til",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^13.4.19",
+    "nextra": "^2.13.0",
+    "nextra-theme-blog": "^2.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shared-data": "workspace:*",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.19",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^18.11.17",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.4",
+    "autoprefixer": "^10.4.13",
+    "eslint-config-custom": "workspace:*",
+    "models": "workspace:*",
+    "postcss": "^8.4.20",
+    "tailwind-config": "workspace:*",
+    "tailwindcss": "^3.2.4",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.1.6"
+  }
+}
