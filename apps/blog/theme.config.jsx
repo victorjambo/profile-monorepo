@@ -1,5 +1,9 @@
 export default {
-  footer: <p>MIT 2023 © Nextra.</p>,
+  footer: (
+    <div className="flex justify-between px-6 md:px-11 py-5 border-t items-center">
+      <div className="text-xs">Built by Victor Mutai</div>
+    </div>
+  ),
   head: ({ title, meta }) => (
     <>
       {meta.description && (
@@ -9,9 +13,9 @@ export default {
       {meta.author && <meta name="author" content={meta.author} />}
     </>
   ),
-  readMore: "Read More →",
+  readMore: "More →",
   postFooter: null,
-  darkMode: false,
+  darkMode: true,
   navs: [
     {
       url: "https://github.com/shuding/nextra",

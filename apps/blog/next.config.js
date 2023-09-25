@@ -7,6 +7,13 @@ const withNextra = require("nextra")({
 NextConfig = {
   transpilePackages: ["shared-data"],
   reactStrictMode: true,
+  redirects: () => [
+    {
+      source: "/blog",
+      destination: "/",
+      statusCode: 301,
+    },
+  ],
 };
 
 module.exports = withNextra(NextConfig);
