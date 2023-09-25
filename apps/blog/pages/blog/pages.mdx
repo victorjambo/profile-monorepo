@@ -6,6 +6,9 @@ tag: web development
 author: You
 ---
 
+import Video from "../../components/video";
+
+
 # Next.js Pages
 
 In Next.js, a **page** is a [React Component](https://reactjs.org/docs/components-and-props.html) exported from a `.js`, `.jsx`, `.ts`, or `.tsx` file in the `pages` directory. Each page is associated with a route based on its file name.
@@ -192,6 +195,12 @@ You can use Static Generation for many types of pages, including:
 You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
 
 On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+
+<Video
+  src="https://www.youtube.com/embed/dfxxtnUbODQ?si=TZWSrqdySYXP_VHw"
+  caption="Optimistic UI with automatic error rollback"
+  ratio={223/584}
+/>
 
 In cases like this, you can do one of the following:
 

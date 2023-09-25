@@ -87,6 +87,9 @@ importers:
 
   apps/blog:
     dependencies:
+      intersection-observer:
+        specifier: ^0.12.2
+        version: 0.12.2
       next:
         specifier: ^13.4.19
         version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
@@ -102,6 +105,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      react-intersection-observer:
+        specifier: ^9.5.2
+        version: 9.5.2(react@18.2.0)
       shared-data:
         specifier: workspace:*
         version: link:../../packages/shared-data
@@ -136,6 +142,9 @@ importers:
       postcss:
         specifier: ^8.4.20
         version: 8.4.28
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
       tailwind-config:
         specifier: workspace:*
         version: link:../../packages/tailwind-config
@@ -4438,6 +4447,10 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
+  /intersection-observer@0.12.2:
+    resolution: {integrity: sha512-7m1vEcPCxXYI8HqnL8CKI6siDyD+eIWSwgB3DZA+ZTogxk9I4CDnj4wilt9x/+/QbHI4YG5YZNmC6458/e9Ktg==}
+    dev: false
+
   /is-alphabetical@2.0.1:
     resolution: {integrity: sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ==}
     dev: false
@@ -6578,6 +6591,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-intersection-observer@9.5.2(react@18.2.0):
+    resolution: {integrity: sha512-EmoV66/yvksJcGa1rdW0nDNc4I1RifDWkT50gXSFnPLYQ4xUptuDD4V7k+Rj1OgVAlww628KLGcxPXFlOkkU/Q==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is@16.13.1:

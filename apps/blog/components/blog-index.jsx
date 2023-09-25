@@ -2,6 +2,7 @@ import { getPagesUnderRoute } from "nextra/context";
 import filterRouteLocale from "nextra/filter-route-locale";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
 
 export default function BlogIndex({ more = "Read more" }) {
   const { locale, defaultLocale } = useRouter();
@@ -41,3 +42,7 @@ export default function BlogIndex({ more = "Read more" }) {
     );
   });
 }
+
+BlogIndex.propTypes = {
+  more: PropTypes.string,
+};

@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "intersection-observer": "^0.12.2",
     "next": "^13.4.19",
     "nextra": "^2.13.0",
     "nextra-theme-blog": "^2.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.5.2",
     "shared-data": "workspace:*",
     "ui": "workspace:*"
   },
@@ -27,6 +29,7 @@
     "eslint-config-custom": "workspace:*",
     "models": "workspace:*",
     "postcss": "^8.4.20",
+    "prop-types": "^15.8.1",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.2.4",
     "tsconfig": "workspace:*",

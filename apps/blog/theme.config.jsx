@@ -13,7 +13,7 @@ export default {
       {meta.author && <meta name="author" content={meta.author} />}
     </>
   ),
-  readMore: "More →",
+  readMore: "Read More →",
   postFooter: null,
   darkMode: true,
   navs: [
