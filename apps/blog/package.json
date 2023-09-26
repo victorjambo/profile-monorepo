@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3003",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -29,7 +29,6 @@
     "eslint-config-custom": "workspace:*",
     "models": "workspace:*",
     "postcss": "^8.4.20",
-    "prop-types": "^15.8.1",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.2.4",
     "tsconfig": "workspace:*",
