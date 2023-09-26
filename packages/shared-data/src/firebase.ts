@@ -17,5 +17,9 @@ export const Collections = {
     name: process.env.NEXT_PUBLIC_V3_COLLECTION ?? "v3",
     document: process.env.NEXT_PUBLIC_V3_DOCUMENT ?? "resume-",
     referer: process.env.NEXT_PUBLIC_V3_DOCUMENT_REFERER ?? "source-",
+    secrets: {
+      name: "v3-secrets",
+      document: "x2kuBdlkU32SVqWGh3bY",
+    },
   },
 } as const;
