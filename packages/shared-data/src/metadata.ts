@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const MetadataSEO: Metadata = {
+  metadataBase: new URL('https://mutai.dev'),
   title: "Victor Mutai",
   description: "Senior Software Engineer",
   authors: [{ name: "Victor Mutai", url: "https://mutai.dev" }],
