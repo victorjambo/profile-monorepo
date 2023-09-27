@@ -49,7 +49,6 @@ export const useVisitors = (): ResponseData => {
     v3Snapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
       const v3data = doc.data() as FirebaseResponse<Timestamp>;
-      console.log("🚀", doc.id);
       if (Boolean(v3data.count)) {
         _data.push({
           path: doc.id,
