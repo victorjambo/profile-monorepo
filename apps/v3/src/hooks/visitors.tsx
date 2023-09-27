@@ -13,11 +13,11 @@ import { Collections, Config } from "shared-data";
 
 export const useVisitors = (path: string): void => {
   const visitors = useCallback(async () => {
-    const documentId = `${Collections.v3.document}${path}`;
+    const documentId = `${Collections.routes.documents[0]}${path}`;
     const firebaseApp = initializeApp(Config);
     const firestore = getFirestore(firebaseApp);
 
-    const docRef = doc(firestore, Collections.v3.name, documentId);
+    const docRef = doc(firestore, Collections.routes.collection, documentId);
     const snap = await getDoc(docRef);
     const counter = snap.data() as FirebaseCounter | undefined;
 

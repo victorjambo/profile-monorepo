@@ -9,17 +9,21 @@ export const Config = {
 } as const;
 
 export const Collections = {
-  v2: {
-    name: process.env.NEXT_PUBLIC_V2_COLLECTION ?? "v2",
-    document: process.env.NEXT_PUBLIC_V2_DOCUMENT ?? "resume-dev",
+  routes: {
+    collection: process.env.NEXT_PUBLIC_ROUTES_COLLECTION ?? "v3-routes",
+    documents: [
+      process.env.NEXT_PUBLIC_ROUTES_DOCUMENTS_RESUME ?? "resume-",
+      process.env.NEXT_PUBLIC_ROUTES_DOCUMENTS_ROOT ?? "root-",
+    ],
   },
-  v3: {
-    name: process.env.NEXT_PUBLIC_V3_COLLECTION ?? "v3-routes",
-    document: process.env.NEXT_PUBLIC_V3_DOCUMENT ?? "resume-",
-    referer: process.env.NEXT_PUBLIC_V3_DOCUMENT_REFERER ?? "source-",
-    secrets: {
-      name: "v3-secrets",
-      document: "x2kuBdlkU32SVqWGh3bY",
-    },
+  secrets: {
+    collection: process.env.NEXT_PUBLIC_SECRETS_COLLECTION ?? "v3-secrets",
+    documents: [
+      process.env.NEXT_PUBLIC_SECRETS_DOCUMENTS_AUTO ?? "x2kuBdlkU32SVqWGh3bY",
+    ],
+  },
+  v2: {
+    collection: process.env.NEXT_PUBLIC_V2_COLLECTION ?? "v2",
+    documents: [process.env.NEXT_PUBLIC_V2_DOCUMENTS_RESUME ?? "resume-dev"],
   },
 } as const;

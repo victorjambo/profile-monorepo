@@ -17,8 +17,8 @@ export const useVisitors = (): void => {
 
     const resumeRef = doc(
       firestore,
-      Collections.v2.name,
-      Collections.v2.document
+      Collections.v2.collection,
+      Collections.v2.documents[0]
     );
     const snap = await getDoc(resumeRef);
     const counter = snap.data() as FirebaseCounter | undefined;

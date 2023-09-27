@@ -25,8 +25,8 @@ export default function Login({ setIsAuth }: LoginProps): JSX.Element {
 
     const docRef = doc(
       firestore,
-      Collections.v3.secrets.name,
-      Collections.v3.secrets.document
+      Collections.secrets.collection,
+      Collections.secrets.documents[0]
     );
     const snap = await getDoc(docRef);
     const res = snap.data() as { password: string } | undefined;

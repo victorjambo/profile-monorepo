@@ -14,11 +14,11 @@ import { Collections, Config } from "shared-data";
 export const useReferer = (searchParams?: { source: string }): void => {
   const referer = useCallback(async () => {
     const source = searchParams?.source ?? "root";
-    const documentId = `${Collections.v3.referer}${source}`;
+    const documentId = `${Collections.routes.collection}${source}`;
     const firebaseApp = initializeApp(Config);
     const firestore = getFirestore(firebaseApp);
 
-    const docRef = doc(firestore, Collections.v3.name, documentId);
+    const docRef = doc(firestore, Collections.routes.documents[1], documentId);
     const snap = await getDoc(docRef);
     const counter = snap.data() as FirebaseCounter | undefined;
 

@@ -28,7 +28,7 @@ export const useVisitors = (): ResponseData => {
 
     // V2
     const v2Snapshot = await getDoc(
-      doc(firestore, Collections.v2.name, Collections.v2.document)
+      doc(firestore, Collections.v2.collection, Collections.v2.document[0])
     );
     const v2data = v2Snapshot.data() as FirebaseResponse<Timestamp> | undefined;
     if (v2data) {
@@ -43,7 +43,7 @@ export const useVisitors = (): ResponseData => {
 
     // V3
     const v3Snapshot = await getDocs(
-      collection(firestore, Collections.v3.name)
+      collection(firestore, Collections.routes.collection)
     );
     const _data: V3Data[] = [];
     v3Snapshot.forEach((doc) => {

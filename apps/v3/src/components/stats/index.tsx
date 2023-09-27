@@ -4,7 +4,7 @@ import type { Timestamp } from "firebase/firestore";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 import type { FirebaseResponse, Data } from "models";
 import { useCallback, useEffect, useState } from "react";
-import { /* Collections, */ Config } from "shared-data";
+import { Collections, Config } from "shared-data";
 import moment from "moment";
 
 export default function Stats(): JSX.Element {
@@ -17,7 +17,7 @@ export default function Stats(): JSX.Element {
     const _data: Data[] = [];
 
     const snapshot = await getDocs(
-      collection(firestore, "v3" /* TODO Collections.v3.name */)
+      collection(firestore, Collections.routes.collection)
     );
     snapshot.forEach((doc) => {
       const docData = doc.data() as FirebaseResponse<Timestamp>;
