@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MDXProvider } from "@mdx-js/react";
 import { notFound } from 'next/navigation'
 import { logs } from "../../../logs";
-import { ProviderComponents } from "../../../components/provider-components";
+import { ProviderComponents } from "../../../components/providers";
 
 export default function Page({
   params,
