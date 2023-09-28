@@ -1,23 +1,21 @@
 {
-  "name": "v2",
-  "version": "2.0.0",
+  "name": "logs",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3002",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "firebase": "^10.4.0",
+    "moment": "^2.29.4",
     "next": "^13.5.3",
-    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "shared-data": "workspace:*",
-    "sharp": "^0.32.1",
     "ui": "workspace:*"
   },
   "devDependencies": {
