@@ -10,7 +10,10 @@ const comfortaa = Comfortaa({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = MetadataSEO;
+export const metadata: Metadata = {
+  ...MetadataSEO,
+  title: "logs - Victor Mutai",
+};
 
 export default function RootLayout({
   children,
