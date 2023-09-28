@@ -1,3 +1,4 @@
+import "./header.css";
 import Link from "next/link";
 
 export default function Header(): JSX.Element {
@@ -5,7 +6,7 @@ export default function Header(): JSX.Element {
     <header className="flex justify-between items-center my-4 h-8 mb-20">
       <div className="flex items-start">
         <Link href="/">
-          <img alt="log" src="/images/icons/icon.png" width={60} />
+          <span className="logo font-bold">victor</span>
         </Link>
       </div>
       <div className="flex items-center">
