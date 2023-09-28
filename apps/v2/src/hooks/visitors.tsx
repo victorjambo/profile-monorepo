@@ -6,9 +6,10 @@ import {
   doc,
   updateDoc,
   Timestamp,
+  setDoc,
 } from "firebase/firestore";
 import { useCallback, useEffect } from "react";
-import type { FirebaseCounter, FirebasePayload } from "models";
+import type { FirebaseCounter } from "models";
 import { Collections, Config, V2Documents } from "shared-data";
 
 export const useVisitors = (searchParams?: { source: string }): void => {
@@ -24,20 +25,18 @@ export const useVisitors = (searchParams?: { source: string }): void => {
     const counter = snap.data() as FirebaseCounter | undefined;
 
     try {
-      let payload: FirebasePayload<Timestamp> = {
-        count: 1,
-        created: Timestamp.now(),
-        updated: Timestamp.now(),
-      };
-
-      if (counter?.count) {
-        payload = {
+      if (counter) {
+        await updateDoc(resumeRef, {
           count: counter.count + 1,
           updated: Timestamp.now(),
-        };
+        });
+      } else {
+        await setDoc(resumeRef, {
+          count: 1,
+          created: Timestamp.now(),
+          updated: Timestamp.now(),
+        });
       }
-
-      await updateDoc(resumeRef, payload as never);
     } catch {
       // silent fail
     }
