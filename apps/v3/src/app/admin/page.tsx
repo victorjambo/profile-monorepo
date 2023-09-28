@@ -6,5 +6,10 @@ import Stats from "../../components/stats";
 export default function Page(): JSX.Element {
   const [isAuth, setIsAuth] = useState<boolean>(false);
 
-  return <main>{isAuth ? <Stats /> : <Login setIsAuth={setIsAuth} />}</main>;
+  return (
+    <main>
+      <title>Admin - Victor Mutai</title>
+      {isAuth ? <Stats /> : <Login setIsAuth={setIsAuth} />}
+    </main>
+  );
 }

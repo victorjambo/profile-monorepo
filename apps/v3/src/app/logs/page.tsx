@@ -14,6 +14,7 @@ const laila = Laila({
 export default function Page(): JSX.Element {
   return (
     <main className="w-full relative">
+      <title>logs - Victor Mutai</title>
       <div className="h-screen p-6 md:p-11">
         <NavBack />
         <HeaderLinks />

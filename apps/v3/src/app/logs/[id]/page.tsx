@@ -18,11 +18,13 @@ export default function Page({
   params: { id: string };
 }): JSX.Element {
   const [blog, setBlog] = useState<IBlog | null>(null);
+  const [blogId, setBlogId] = useState<string>("");
 
   useEffect(() => {
-    const blogId = params.id;
-    if (blogId) {
-      const _blog = blogs.find((b) => b.id === Number(blogId));
+    const _blogId = params.id;
+    setBlogId(_blogId);
+    if (_blogId) {
+      const _blog = blogs.find((b) => b.id === Number(_blogId));
       if (_blog) {
         setBlog(_blog);
       }
@@ -31,6 +33,7 @@ export default function Page({
 
   return (
     <main className="w-full relative">
+      <title>{blogId} - Victor Mutai</title>
       <div className="h-screen p-6 md:p-11">
         <NavBack label="logs" path="/logs" />
         <HeaderLinks />

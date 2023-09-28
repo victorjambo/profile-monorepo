@@ -11,6 +11,7 @@ export default function ResumeView({
 
   return (
     <div className="w-full h-screen bg-[#1d1d1d]">
+      <title>Resume - Victor Mutai</title>
       <NavBack color />
       <Resume />
     </div>
