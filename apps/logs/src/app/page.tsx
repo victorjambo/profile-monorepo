@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Logs from "../components/logs";
 
 export default function Page(): JSX.Element {
   return (
@@ -60,6 +61,11 @@ export default function Page(): JSX.Element {
                 linkedin
               </a>
             </div>
+          </section>
+
+          <section className="mb-6">
+            <h3>logs</h3>
+            <Logs />
           </section>
         </article>
       </main>

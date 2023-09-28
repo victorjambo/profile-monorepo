@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
 import { MDXProvider } from "@mdx-js/react";
-import { notFound } from 'next/navigation'
+import { notFound } from "next/navigation";
 import { logs } from "../../../logs";
 import { ProviderComponents } from "../../../components/providers";
+import Header from "../../../components/header";
+import Footer from "../../../components/footer";
 
 export default function Page({
   params,
@@ -18,16 +19,14 @@ export default function Page({
   const Component = logs[slug];
 
   return (
-    <div>
-      <Link href="/logs">Go back</Link>
-
-      <div>this is: {params.slug}</div>
-
+    <div className="container mx-auto max-w-3xl px-4 lg:px-0">
+      <Header />
       <MDXProvider components={ProviderComponents}>
-        <main className="flex justify-center w-full">
-          <article className="prose w-[640px]">{Component()}</article>
+        <main className="basis-1/2">
+          <article className="prose-xl">{Component()}</article>
         </main>
       </MDXProvider>
+      <Footer />
     </div>
   );
 }
