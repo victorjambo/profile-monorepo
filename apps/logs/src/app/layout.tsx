@@ -2,11 +2,11 @@ import "./globals.css";
 import "ui/styles.css";
 
 import type { Metadata } from "next";
-import { Comfortaa } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "ui";
 import { MetadataSEO } from "shared-data";
 
-const comfortaa = Comfortaa({
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
       {process.env.NODE_ENV === "production" && <Analytics />}
 
       <body
-        className={`${comfortaa.className} light old-text-serket dark:text-slate-300 old-bg-summer dark:bg-gray-900 bg-cover bg-fixed`}
+        className={`${inter.className} light text-serket dark:text-slate-300 bg-summer dark:bg-gray-900 bg-cover bg-fixed`}
       >
         {children}
       </body>

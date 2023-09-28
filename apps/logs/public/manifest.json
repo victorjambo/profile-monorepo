@@ -1,0 +1,31 @@
+{
+  "short_name": "mutai.dev",
+  "name": "Victor Mutai",
+  "description": "Victor Mutai Senior Software Engineer",
+  "iconPath": "/images/favicon.ico",
+  "providedBy": {
+    "name": "Victor Mutai",
+    "url": "https://twitter.com/victor_jambo"
+  },
+  "icons": [
+    {
+      "src": "/images/icons/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icons/apple-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icons/apple-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "display": "standalone"
+}
