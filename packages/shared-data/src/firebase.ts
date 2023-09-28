@@ -24,6 +24,19 @@ export const Collections = {
   },
   v2: {
     collection: process.env.NEXT_PUBLIC_V2_COLLECTION ?? "v2",
-    documents: [process.env.NEXT_PUBLIC_V2_DOCUMENTS_RESUME ?? "resume-dev"],
+    documents: [process.env.NEXT_PUBLIC_V2_DOCUMENTS_ROOT ?? "root-"],
   },
 } as const;
+
+export enum RoutesDocuments {
+  Resume,
+  Root,
+}
+
+export enum SecretsDocuments {
+  Auto,
+}
+
+export enum V2Documents {
+  Root,
+}

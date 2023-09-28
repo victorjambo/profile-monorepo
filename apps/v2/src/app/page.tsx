@@ -7,8 +7,15 @@ import Footer from "../components/footer";
 import ContactSection from "../components/sections/contact";
 import ExperienceSection from "../components/sections/experience";
 import WorkSection from "../components/sections/work";
+import { useVisitors } from "../hooks/visitors";
 
-export default function Home(): JSX.Element {
+export default function Home({
+  searchParams,
+}: {
+  searchParams?: { source: string };
+}): JSX.Element {
+  useVisitors(searchParams);
+
   return (
     <div>
       <Navbar />

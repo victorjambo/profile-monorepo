@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { Collections, Config } from "shared-data";
+import { Collections, Config, SecretsDocuments } from "shared-data";
 
 interface LoginProps {
   setIsAuth: React.Dispatch<React.SetStateAction<boolean>>;
@@ -26,7 +26,7 @@ export default function Login({ setIsAuth }: LoginProps): JSX.Element {
     const docRef = doc(
       firestore,
       Collections.secrets.collection,
-      Collections.secrets.documents[0]
+      Collections.secrets.documents[SecretsDocuments.Auto]
     );
     const snap = await getDoc(docRef);
     const res = snap.data() as { password: string } | undefined;

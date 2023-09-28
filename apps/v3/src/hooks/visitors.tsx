@@ -9,11 +9,13 @@ import {
 } from "firebase/firestore";
 import { useCallback, useEffect } from "react";
 import type { FirebaseCounter } from "models";
-import { Collections, Config } from "shared-data";
+import { Collections, Config, RoutesDocuments } from "shared-data";
 
 export const useVisitors = (path: string): void => {
   const visitors = useCallback(async () => {
-    const documentId = `${Collections.routes.documents[0]}${path}`;
+    const documentId = `${
+      Collections.routes.documents[RoutesDocuments.Resume]
+    }${path}`;
     const firebaseApp = initializeApp(Config);
     const firestore = getFirestore(firebaseApp);
 
@@ -31,12 +33,13 @@ export const useVisitors = (path: string): void => {
         await setDoc(docRef, {
           count: 1,
           created: Timestamp.now(),
+          updated: Timestamp.now(),
         });
       }
     } catch {
       // silent fail
     }
-  }, []);
+  }, [path]);
 
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") return;

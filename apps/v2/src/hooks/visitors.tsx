@@ -8,18 +8,17 @@ import {
 } from "firebase/firestore";
 import { useCallback, useEffect } from "react";
 import type { FirebaseCounter, FirebasePayload } from "models";
-import { Collections, Config } from "shared-data";
+import { Collections, Config, V2Documents } from "shared-data";
 
-export const useVisitors = (): void => {
+export const useVisitors = (searchParams?: { source: string }): void => {
   const visitors = useCallback(async () => {
+    const source = searchParams?.source ?? "home";
+    const documentId = `${Collections.v2.documents[V2Documents.Root]}${source}`;
+
     const firebaseApp = initializeApp(Config);
     const firestore = getFirestore(firebaseApp);
 
-    const resumeRef = doc(
-      firestore,
-      Collections.v2.collection,
-      Collections.v2.documents[0]
-    );
+    const resumeRef = doc(firestore, Collections.v2.collection, documentId);
     const snap = await getDoc(resumeRef);
     const counter = snap.data() as FirebaseCounter | undefined;
 
@@ -27,6 +26,7 @@ export const useVisitors = (): void => {
       let payload: FirebasePayload<Timestamp> = {
         count: 1,
         created: Timestamp.now(),
+        updated: Timestamp.now(),
       };
 
       if (counter?.count) {
@@ -40,7 +40,7 @@ export const useVisitors = (): void => {
     } catch {
       // silent fail
     }
-  }, []);
+  }, [searchParams?.source]);
 
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") return;
