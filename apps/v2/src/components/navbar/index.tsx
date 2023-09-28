@@ -18,7 +18,7 @@ const navigation: INav[] = [
   { id: "02", name: "Experience" },
   { id: "03", name: "Work" },
   { id: "04", name: "Contact" },
-  { id: "05", name: "WIP", link: "https://profile-monorepo-v3.vercel.app?source=wip" },
+  { id: "05", name: "Blog", link: "/blog" },
 ];
 
 const defaultCurrentSection = {
