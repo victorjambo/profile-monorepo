@@ -13,3 +13,10 @@ export interface FirebaseResponse<Timestamp> {
 export interface FirebaseCounter {
   count: number;
 }
+
+export interface Data {
+  path: string;
+  visits: number;
+  updated: string;
+  created: string;
+}
