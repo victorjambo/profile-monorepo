@@ -1,4 +1,5 @@
 import React from "react";
+import { DEV_EMAIL } from "shared-data";
 import Blogs from "../components/blogs";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -41,23 +42,23 @@ export default function Page(): JSX.Element {
           <section className="mb-6 mt-6">
             <h3 className="text-xs text-gray-500">elsewhere</h3>
             <div>
-              <a href="/" rel="noopener noreferrer" target="_blank">
-                instagram
+              <a href="https://victorjambo.medium.com" rel="noopener noreferrer" target="_blank">
+                medium
               </a>
               &nbsp;·&nbsp;
-              <a href="/" rel="noopener noreferrer" target="_blank">
+              <a href={`mailto:${DEV_EMAIL}`} rel="noopener noreferrer" target="_blank">
                 email
               </a>
               &nbsp;·&nbsp;
-              <a href="/" rel="noopener noreferrer" target="_blank">
+              <a href="https://github.com/victorjambo" rel="noopener noreferrer" target="_blank">
                 github
               </a>
               &nbsp;·&nbsp;
-              <a href="/" rel="noopener noreferrer" target="_blank">
+              <a href="https://twitter.com/victor_jambo" rel="noopener noreferrer" target="_blank">
                 twitter
               </a>
               &nbsp;·&nbsp;
-              <a href="/" rel="noopener noreferrer" target="_blank">
+              <a href="https://www.linkedin.com/in/mutaivictor" rel="noopener noreferrer" target="_blank">
                 linkedin
               </a>
             </div>

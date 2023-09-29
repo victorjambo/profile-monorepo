@@ -17,7 +17,7 @@ export function ThemeToggle(): JSX.Element {
         <MoonIcon className="w-5 h-5 absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
       </Menu.Button>
-      <Menu.Items className="absolute bottom-10 right-0 mt-2 min-w-[8rem] divide-y divide-serket rounded-md bg-summer dark:bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+      <Menu.Items className="absolute bottom-10 right-0 mt-2 min-w-[8rem] divide-y rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
         <Menu.Item>
           {({ active }) => (
             <button

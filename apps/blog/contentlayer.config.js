@@ -34,6 +34,14 @@ export const Blogs = defineDocumentType(() => ({
     },
     image: {
       type: "string",
+    },
+    tags: {
+      type: "list",
+      of: { type: "string" },
+    },
+    isVisible: {
+      type: "boolean",
+      default: true,
     }
   },
   computedFields,

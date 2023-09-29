@@ -1,6 +1,62 @@
 ---
 title: Styling Email templates
-published: false
+published: true
+tags:
+  - HTML
+  - web
+  - styling
 ---
 
-`WIP` Planning to write this!!
+# Best Practices in Styling Email Templates
+
+Emails are a crucial way to communicate with others, whether for business or personal reasons. Making them look good is important, and that's where styling comes in. Here are some simple and effective ways to style your email templates!
+
+## 1. Use Inline Styles
+
+Unlike regular web pages, where we usually link to an external stylesheet, for emails, it's best to use **inline styles**. This means including your styles directly within the HTML elements. Email clients sometimes don't fully support external stylesheets, so inline styles ensure your formatting stays intact.
+
+```html
+<p style="color: blue; font-size: 16px;">Hello there!</p>
+```
+
+## 2. Keep it Simple
+
+Fancy designs might look great on a website, but in emails, simpler is often better. Complex designs can get messy in different email clients. Stick to basic layouts, colors, and fonts to ensure a clean and consistent look across devices.
+
+## 3. Use Tables for Layouts
+
+For arranging content, **use tables**. Tables are well-supported in most email clients and can help you achieve the desired layout. Each section or block of your email can be a table cell, making it easy to structure your content.
+
+```html
+<table>
+  <tr>
+    <td style="padding: 10px;">Content goes here</td>
+  </tr>
+</table>
+```
+
+## 4. Optimize Images
+
+If you're using images in your emails, **optimize them for email**. Large images can slow down email loading times. Keep image sizes small and use the appropriate image format (JPEG or PNG) to ensure quick loading and a smooth user experience.
+
+## 5. Test Extensively
+
+Different email clients can display your email differently. Always **test your email across various email platforms** like Gmail, Outlook, Apple Mail, etc. This way, you can make adjustments to your styles to ensure your email looks good for everyone.
+
+## 6. Mobile Responsiveness
+
+Most people read emails on their phones, so your email template should be **mobile-friendly**. Use **responsive design** techniques to ensure your email looks good and is easily readable on both desktop and mobile devices.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+```
+
+## 7. Text over Images
+
+If you're using images with text, make sure to include **alt text**. Alt text is the text that appears if the image doesn't load. It's important for accessibility and ensures the message is conveyed even without the image.
+
+```html
+<img src="image.jpg" alt="Description of the image" />
+```
+
+Styling email templates requires a balance between making your email visually appealing and ensuring it's well-supported across various email platforms. Following these best practices will help you create effective and attractive email designs. Happy emailing! 😊

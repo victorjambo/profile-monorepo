@@ -29,7 +29,7 @@ export default function RootLayout({
       {process.env.NODE_ENV === "production" && <Analytics />}
 
       <body
-        className={`${inter.className} light text-serket dark:text-slate-300 bg-summer dark:bg-gray-900 bg-cover bg-fixed`}
+        className={`${inter.className} dark:text-slate-300 dark:bg-gray-900`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

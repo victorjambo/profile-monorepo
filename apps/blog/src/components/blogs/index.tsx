@@ -3,14 +3,13 @@ import { allBlogs } from "../../../.contentlayer/generated";
 import Blog from "../blog";
 
 export default function Blogs(): JSX.Element {
-  const blogs = allBlogs.filter((blog) => blog.published);
+  const blogs = allBlogs.filter((blog) => blog.isVisible);
 
   return (
     <table className="w-full">
       <thead>
         <tr>
           <th className="pl-3 text-left">title</th>
-          <th className="pr-3 text-right">tags</th>
         </tr>
       </thead>
       <tbody>
