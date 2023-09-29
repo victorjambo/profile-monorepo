@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   ...MetadataSEO,
-  title: "logs - Victor Mutai",
+  title: "logs - victor mutai",
 };
 
 export default function RootLayout({

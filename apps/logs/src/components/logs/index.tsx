@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { logs } from "../../logs";
 import Log from "./log";
 
@@ -13,7 +13,12 @@ export default function Logs(): JSX.Element {
       </thead>
       <tbody>
         {Object.keys(logs).map((log, idx) => (
-          <Log idx={idx} key={log} len={Object.keys(logs).length} log={log} />
+          <Log
+            idx={idx}
+            key={log}
+            len={Object.keys(logs).length}
+            log={logs[log]}
+          />
         ))}
       </tbody>
     </table>

@@ -16,14 +16,14 @@ export default function Page({
   const found = Object.keys(logs).find((log) => log === slug);
   if (!found) return notFound();
 
-  const Component = logs[slug];
+  const { component } = logs[slug];
 
   return (
     <div className="container mx-auto max-w-3xl px-4 lg:px-0">
       <Header />
       <MDXProvider components={ProviderComponents}>
         <main className="basis-1/2">
-          <article className="prose-xl">{Component()}</article>
+          <article className="prose-xl">{component()}</article>
         </main>
       </MDXProvider>
       <Footer />
