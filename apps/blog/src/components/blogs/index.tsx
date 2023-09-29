@@ -1,5 +1,5 @@
 "use client";
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "../../../.contentlayer/generated";
 import Blog from "../blog";
 
 export default function Blogs(): JSX.Element {
