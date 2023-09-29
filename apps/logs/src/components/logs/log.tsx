@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { LogMeta } from "../../logs";
+import { type Logs } from "contentlayer/generated";
 
 interface LogProps {
-  log: LogMeta;
+  log: Logs;
   len: number;
   idx: number;
 }
@@ -17,7 +17,7 @@ export default function Log({ log, len, idx }: LogProps): JSX.Element {
       <td className="pl-3">
         <Link href={`/logs/${log.slug}`}>{log.title}</Link>
       </td>
-      <td className="text-right pr-3 text-sm">#{log.tags?.join(', #')}</td>
+      <td className="text-right pr-3 text-sm">#{['react'].join(', #')}</td>
     </tr>
   );
 }

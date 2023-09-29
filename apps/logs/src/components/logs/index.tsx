@@ -1,8 +1,10 @@
 "use client";
-import { logs } from "../../logs";
+import { allLogs } from "contentlayer/generated";
 import Log from "./log";
 
-export default function Logs(): JSX.Element {
+export default function LogsTable(): JSX.Element {
+  const posts = allLogs.filter((post) => post.published);
+
   return (
     <table className="w-full">
       <thead>
@@ -12,13 +14,8 @@ export default function Logs(): JSX.Element {
         </tr>
       </thead>
       <tbody>
-        {Object.keys(logs).map((log, idx) => (
-          <Log
-            idx={idx}
-            key={log}
-            len={Object.keys(logs).length}
-            log={logs[log]}
-          />
+        {posts.map((post, idx) => (
+          <Log idx={idx} key={post._id} len={posts.length} log={post} />
         ))}
       </tbody>
     </table>

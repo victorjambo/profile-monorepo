@@ -12,7 +12,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   ...MetadataSEO,
-  title: "logs - victor mutai",
+  title: {
+    default: "Victor Mutai",
+    template: `%s | Victor Mutai`,
+  },
 };
 
 export default function RootLayout({

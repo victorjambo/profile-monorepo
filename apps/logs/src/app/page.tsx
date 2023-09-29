@@ -1,7 +1,7 @@
 import React from "react";
+import LogsTable from "../components/logs";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Logs from "../components/logs";
 
 export default function Page(): JSX.Element {
   return (
@@ -63,9 +63,8 @@ export default function Page(): JSX.Element {
             </div>
           </section>
 
-          <section className="mb-6">
-            <h3>logs</h3>
-            <Logs />
+          <section className="mb-6 mt-6">
+            <LogsTable />
           </section>
         </article>
       </main>
