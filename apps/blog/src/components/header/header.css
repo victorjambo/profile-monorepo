@@ -1,0 +1,36 @@
+@keyframes blink {
+  0%,
+  to {
+    background-color: #0000;
+  }
+
+  50% {
+    background-color: currentColor;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: stretch;
+  gap: 0.5rem;
+}
+
+.logo:before {
+  content: "❯ ";
+  user-select: none;
+}
+
+.logo:after {
+  width: 0.5rem;
+  background-color: currentColor;
+  display: block;
+  content: "";
+  user-select: none;
+  animation: 1s blink step-end infinite;
+}
+
+@media (prefers-reduced-motion) {
+  .logo:after {
+    animation: none;
+  }
+}

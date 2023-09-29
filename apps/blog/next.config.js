@@ -1,19 +1,16 @@
-const withNextra = require("nextra")({
-  theme: "nextra-theme-blog",
-  themeConfig: "./theme.config.tsx",
-});
+const { withContentlayer } = require("next-contentlayer");
 
-/** @type {import('next').NextConfig} */
-NextConfig = {
+module.exports = withContentlayer({
   transpilePackages: ["shared-data"],
   reactStrictMode: true,
-  redirects: () => [
-    {
-      source: "/blog",
-      destination: "/",
-      statusCode: 301,
-    },
-  ],
-};
-
-module.exports = withNextra(NextConfig);
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        port: '',
+        pathname: '/wikipedia/commons/thumb/**',
+      },
+    ],
+  },
+});
