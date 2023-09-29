@@ -10,12 +10,12 @@ export default function FooterLinks(): JSX.Element {
       >
         colophon
       </Link>
-      <Link
+      <a
         className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
-        href="/logs"
+        href="https://blog.mutai.dev/"
       >
         logs
-      </Link>
+      </a>
     </div>
   );
 }
