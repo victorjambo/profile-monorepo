@@ -11,7 +11,7 @@ export default function Blog({ blog, len, idx }: BlogProps): JSX.Element {
   const router = useRouter();
   return (
     <tr
-      className={`border-t border-serket border-opacity-20 hover:bg-slate-200 cursor-pointer ${
+      className={`border-t border-serket border-opacity-20 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer ${
         idx + 1 === len ? "border-b-0" : "border-b"
       }`}
       onClick={() => {

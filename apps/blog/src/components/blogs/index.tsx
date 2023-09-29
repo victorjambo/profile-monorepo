@@ -2,8 +2,15 @@
 import { allBlogs } from "../../../.contentlayer/generated";
 import Blog from "../blog";
 
-export default function Blogs(): JSX.Element {
-  const blogs = allBlogs.filter((blog) => blog.isVisible);
+export default function Blogs({
+  unpublished,
+}: {
+  unpublished?: string;
+}): JSX.Element {
+  const blogs = allBlogs.filter((blog) => {
+    if (unpublished) return blog.isVisible && !blog.published;
+    return blog.isVisible && blog.published;
+  });
 
   return (
     <table className="w-full">
