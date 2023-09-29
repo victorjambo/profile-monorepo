@@ -24,7 +24,7 @@ importers:
         specifier: latest
         version: 1.10.14
 
-  apps/logs:
+  apps/blog:
     dependencies:
       '@heroicons/react':
         specifier: ^2.0.18

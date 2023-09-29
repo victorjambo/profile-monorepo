@@ -2,12 +2,12 @@ import Link from "next/link";
 import { type Logs } from "contentlayer/generated";
 
 interface BlogProps {
-  log: Logs;
+  blog: Logs;
   len: number;
   idx: number;
 }
 
-export default function Blog({ log, len, idx }: BlogProps): JSX.Element {
+export default function Blog({ blog, len, idx }: BlogProps): JSX.Element {
   return (
     <tr
       className={`border-t border-serket border-opacity-20 hover:bg-slate-200 ${
@@ -15,7 +15,7 @@ export default function Blog({ log, len, idx }: BlogProps): JSX.Element {
       }`}
     >
       <td className="pl-3">
-        <Link href={`/logs/${log.slug}`}>{log.title}</Link>
+        <Link href={`/logs/${blog.slug}`}>{blog.title}</Link>
       </td>
       <td className="text-right pr-3 text-sm">#{['react'].join(', #')}</td>
     </tr>

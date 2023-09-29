@@ -3,7 +3,7 @@ import { allLogs } from "contentlayer/generated";
 import Blog from "../blog";
 
 export default function Blogs(): JSX.Element {
-  const posts = allLogs.filter((post) => post.published);
+  const blogs = allLogs.filter((blog) => blog.published);
 
   return (
     <table className="w-full">
@@ -14,8 +14,8 @@ export default function Blogs(): JSX.Element {
         </tr>
       </thead>
       <tbody>
-        {posts.map((post, idx) => (
-          <Blog idx={idx} key={post._id} len={posts.length} log={post} />
+        {blogs.map((blog, idx) => (
+          <Blog blog={blog} idx={idx} key={blog._id} len={blogs.length} />
         ))}
       </tbody>
     </table>
