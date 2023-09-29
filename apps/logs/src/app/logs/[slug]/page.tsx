@@ -1,7 +1,7 @@
 "use client";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { allLogs } from "contentlayer/generated";
-import Image from "next/image";
 import { MDXProvider } from "../../../components/providers";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
