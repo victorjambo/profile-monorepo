@@ -96,6 +96,7 @@ export default function Page(): JSX.Element {
                 <span> — Haphazardly organized loosely by interest.</span>
               </li>
             </ul>
+            <p>you can find all other posts in the <Link className="underline" href="/logs">log</Link></p>
           </section>
         </article>
       </main>

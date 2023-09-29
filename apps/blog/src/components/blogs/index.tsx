@@ -3,12 +3,14 @@ import { allBlogs } from "../../../.contentlayer/generated";
 import Blog from "../blog";
 
 export default function Blogs({
-  unpublished,
+  query,
 }: {
-  unpublished?: string;
+  query?: { unpublished: string; filter: string };
 }): JSX.Element {
   const blogs = allBlogs.filter((blog) => {
-    if (unpublished) return blog.isVisible && !blog.published;
+    if (query?.unpublished) return blog.isVisible && !blog.published;
+    if (query?.filter)
+      return blog.isVisible && blog.tags?.includes(query.filter);
     return blog.isVisible && blog.published;
   });
 
