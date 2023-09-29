@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "build": "next build",
-    "build:contentlayer": "contentlayer build"
+    "contentlayer": "contentlayer build"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
