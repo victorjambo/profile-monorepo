@@ -1,8 +1,8 @@
 "use client";
 import { allLogs } from "contentlayer/generated";
-import Log from "./log";
+import Blog from "../blog";
 
-export default function LogsTable(): JSX.Element {
+export default function Blogs(): JSX.Element {
   const posts = allLogs.filter((post) => post.published);
 
   return (
@@ -15,7 +15,7 @@ export default function LogsTable(): JSX.Element {
       </thead>
       <tbody>
         {posts.map((post, idx) => (
-          <Log idx={idx} key={post._id} len={posts.length} log={post} />
+          <Blog idx={idx} key={post._id} len={posts.length} log={post} />
         ))}
       </tbody>
     </table>

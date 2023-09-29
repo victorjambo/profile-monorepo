@@ -1,5 +1,5 @@
 import React from "react";
-import LogsTable from "../components/logs";
+import Blogs from "../components/blogs";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
@@ -64,7 +64,7 @@ export default function Page(): JSX.Element {
           </section>
 
           <section className="mb-6 mt-6">
-            <LogsTable />
+            <Blogs />
           </section>
         </article>
       </main>

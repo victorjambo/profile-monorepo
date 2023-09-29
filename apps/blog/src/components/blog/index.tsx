@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { type Logs } from "contentlayer/generated";
 
-interface LogProps {
+interface BlogProps {
   log: Logs;
   len: number;
   idx: number;
 }
 
-export default function Log({ log, len, idx }: LogProps): JSX.Element {
+export default function Blog({ log, len, idx }: BlogProps): JSX.Element {
   return (
     <tr
       className={`border-t border-serket border-opacity-20 hover:bg-slate-200 ${

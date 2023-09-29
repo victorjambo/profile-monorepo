@@ -1,6 +1,6 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import LogsTable from "../../components/logs";
+import Blogs from "../../components/blogs";
 
 export default function Page(): JSX.Element {
   return (
@@ -8,7 +8,7 @@ export default function Page(): JSX.Element {
       <Header />
       <main className="basis-1/2">
         <article className="prose-xl">
-          <LogsTable />
+          <Blogs />
         </article>
       </main>
       <Footer />
