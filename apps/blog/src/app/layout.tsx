@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "ui";
 import { MetadataSEO } from "shared-data";
+import { ThemeProvider } from "../components/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +31,9 @@ export default function RootLayout({
       <body
         className={`${inter.className} light text-serket dark:text-slate-300 bg-summer dark:bg-gray-900 bg-cover bg-fixed`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
