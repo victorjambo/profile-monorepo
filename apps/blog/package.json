@@ -6,8 +6,7 @@
     "dev": "next dev --port 3001",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build",
-    "contentlayer": "contentlayer build"
+    "build": "contentlayer build && next build"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

@@ -1,9 +1,9 @@
 "use client";
-import { allLogs } from "contentlayer/generated";
+import { allBlogs } from "contentlayer/generated";
 import Blog from "../blog";
 
 export default function Blogs(): JSX.Element {
-  const blogs = allLogs.filter((blog) => blog.published);
+  const blogs = allBlogs.filter((blog) => blog.published);
 
   return (
     <table className="w-full">

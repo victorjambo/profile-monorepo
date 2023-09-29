@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { type Logs } from "contentlayer/generated";
+import { type Blogs } from "contentlayer/generated";
 
 interface BlogProps {
-  blog: Logs;
+  blog: Blogs;
   len: number;
   idx: number;
 }

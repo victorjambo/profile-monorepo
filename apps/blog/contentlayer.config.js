@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 const computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => `${doc._raw.flattenedPath}`,
   },
   slugAsParams: {
     type: "string",
@@ -16,8 +16,8 @@ const computedFields = {
   },
 };
 
-export const Logs = defineDocumentType(() => ({
-  name: "Logs",
+export const Blogs = defineDocumentType(() => ({
+  name: "Blogs",
   filePathPattern: "**/*.mdx",
   contentType: "mdx",
   fields: {
@@ -41,7 +41,7 @@ export const Logs = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Logs],
+  documentTypes: [Blogs],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
