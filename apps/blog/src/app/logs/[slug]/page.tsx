@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { cn } from "shared-data";
+import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import type { Blogs } from "../../../../.contentlayer/generated";
 import { allBlogs } from "../../../../.contentlayer/generated";
 import { MDXProvider } from "../../../components/providers";
@@ -27,9 +30,16 @@ export default function Page({ params }: PageProps): JSX.Element {
   if (!blog) return notFound();
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 lg:px-0">
+    <div className="relative container mx-auto max-w-3xl px-4 lg:px-0">
       <title>{blog.title}</title>
       <Header />
+      <Link
+        className={cn("absolute left-[-200px] top-34 hidden xl:inline-flex items-center")}
+        href="/logs"
+      >
+        <ChevronLeftIcon className="mr-2 h-4 w-4" />
+        <span>See all logs</span>
+      </Link>
       <main className="basis-1/2">
         {blog.image ? (
           <Image
