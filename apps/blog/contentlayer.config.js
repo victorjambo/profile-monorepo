@@ -42,7 +42,10 @@ export const Blogs = defineDocumentType(() => ({
     isVisible: {
       type: "boolean",
       default: true,
-    }
+    },
+    date: {
+      type: "date",
+    },
   },
   computedFields,
 }));

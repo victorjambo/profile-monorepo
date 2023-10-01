@@ -34,13 +34,23 @@ export default function Page({ params }: PageProps): JSX.Element {
       <title>{blog.title}</title>
       <Header />
       <Link
-        className={cn("absolute left-[-200px] top-34 hidden xl:inline-flex items-center")}
+        className={cn(
+          "absolute left-[-200px] top-34 hidden xl:inline-flex items-center"
+        )}
         href="/logs"
       >
         <ChevronLeftIcon className="mr-2 h-4 w-4" />
         <span>See all logs</span>
       </Link>
-      <main className="basis-1/2">
+      <main className="basis-3/4">
+        {blog.date ? (
+          <time className="block text-sm text-muted-foreground">
+            Published on {blog.date}
+          </time>
+        ) : null}
+        <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
+          {blog.title}
+        </h1>
         {blog.image ? (
           <Image
             alt={blog.title}
@@ -48,7 +58,7 @@ export default function Page({ params }: PageProps): JSX.Element {
             height={405}
             priority
             src={blog.image}
-            width={720}
+            width={768}
           />
         ) : null}
         <MDXProvider code={blog.body.code} />

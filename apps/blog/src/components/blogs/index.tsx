@@ -22,12 +22,12 @@ export default function Blogs({
   return (
     <table className="w-full">
       <thead>
-        <tr className="">
+        <tr className="pb-5">
           <th className="pl-3 text-left">title</th>
           <th className="pr-3 text-right">
             <Popover className="relative">
               <Popover.Button className="align-middle" type="button">
-                <EllipsisHorizontalIcon className="w-5 h-5 bg-slate-100 rounded" />
+                <EllipsisHorizontalIcon className="w-5 h-5 bg-slate-100 dark:bg-slate-900 rounded" />
               </Popover.Button>
               <Popover.Panel className="absolute z-10 bg-serket">
                 <div className="flex flex-col">

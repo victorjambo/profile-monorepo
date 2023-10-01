@@ -9,7 +9,7 @@ export default function Page(): JSX.Element {
     <div className="container mx-auto max-w-3xl px-4 lg:px-0">
       <Header />
       <main className="basis-3/4">
-        <article className="prose-xl">
+        <article>
           <section className="lead">
             <p>👋 Hi - I&apos;m Victor.</p>
             <p>
