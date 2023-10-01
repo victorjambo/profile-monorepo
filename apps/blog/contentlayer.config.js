@@ -53,6 +53,7 @@ export const Blogs = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Blogs],
+  disableImportAliasWarning: true,
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -60,7 +61,7 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "solarized-dark",
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted

@@ -1,14 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument -- . */
 "use client";
-import Image from "next/image";
-import { notFound } from "next/navigation";
+import moment from "moment";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "shared-data";
+import { notFound } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
-import type { Blogs } from "../../../../.contentlayer/generated";
-import { allBlogs } from "../../../../.contentlayer/generated";
-import { MDXProvider } from "../../../components/providers";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
+import { calculateReadTime } from "../../../helpers/utils";
+import { MDXProvider } from "../../../components/providers";
+import { allBlogs } from "../../../../.contentlayer/generated";
+import type { Blogs } from "../../../../.contentlayer/generated";
 
 interface PageProps {
   params: {
@@ -29,13 +32,15 @@ export default function Page({ params }: PageProps): JSX.Element {
 
   if (!blog) return notFound();
 
+  const readTime = calculateReadTime(blog.body.raw);
+
   return (
     <div className="relative container mx-auto max-w-3xl px-4 lg:px-0">
       <title>{blog.title}</title>
       <Header />
       <Link
         className={cn(
-          "absolute left-[-200px] top-34 hidden xl:inline-flex items-center"
+          "items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4 absolute left-[-200px] top-34 hidden xl:inline-flex"
         )}
         href="/logs"
       >
@@ -43,11 +48,15 @@ export default function Page({ params }: PageProps): JSX.Element {
         <span>See all logs</span>
       </Link>
       <main className="basis-3/4">
-        {blog.date ? (
-          <time className="block text-sm text-muted-foreground">
-            Published on {blog.date}
-          </time>
-        ) : null}
+        <div className="flex items-center text-sm text-muted-foreground">
+          <span>{readTime} min read</span>
+          {blog.date ? (
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- .
+            <time dateTime={blog.date}>
+              &nbsp;·&nbsp;{moment(blog.date).format("MMM Do, YYYY")}
+            </time>
+          ) : null}
+        </div>
         <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
           {blog.title}
         </h1>

@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 import { type Blogs } from "../../../.contentlayer/generated";
-import Tag from "./tag";
+import Tag from "../tag";
 
 interface BlogProps {
   blog: Blogs;

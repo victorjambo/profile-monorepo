@@ -21,6 +21,10 @@ sharedConfig.theme = {
         DEFAULT: "hsl(var(--popover))",
         foreground: "hsl(var(--popover-foreground))",
       },
+      accent: {
+        DEFAULT: "hsl(var(--accent))",
+        foreground: "hsl(var(--accent-foreground))",
+      },
     },
     fontFamily: {
       sans: ["var(--font-sans)", ...fontFamily.sans],

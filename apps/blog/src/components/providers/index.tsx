@@ -135,7 +135,6 @@ const ProviderComponents = {
         className
       )}
       {...props}
-      style={{}}
     />
   ),
   code: ({ className, ...props }) => (
