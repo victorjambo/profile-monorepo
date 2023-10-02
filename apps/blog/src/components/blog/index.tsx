@@ -24,7 +24,7 @@ export default function Blog({ blog, len, idx }: BlogProps): JSX.Element {
       >
         {blog.title}
       </td>
-      <td className="text-right pr-3 text-sm py-4">
+      <td className="text-right pr-3 text-sm py-4 hidden sm:block">
         {blog.tags?.map((tag, i) => <Tag idx={i} key={tag} tag={tag} />)}
       </td>
     </tr>

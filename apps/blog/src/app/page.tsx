@@ -10,12 +10,21 @@ export default function Page(): JSX.Element {
       <Header />
       <main className="basis-3/4">
         <article>
-          <section className="lead">
+          <section className="prose lg:prose-lg">
             <p>👋 Hi - I&apos;m Victor.</p>
             <p>
-              I&apos;m an experienced software engineer who loves building web
-              apps and designing backend systems. I enjoy working in a team
-              environment where skills can be shared as well as developed.{" "}
+              I&apos;m a software engineer who loves building web apps and
+              designing backend systems. I enjoy working in a team environment
+              where skills can be shared as well as developed. Currently,
+              I&apos;m working at{" "}
+              <a
+                className="underline decoration-rose-500 hover:decoration-orange-500 underline-offset-2"
+                href="https://iota.org"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                IOTA Foundation
+              </a>
             </p>
             <p>
               I love taking on complex challenges and creating product-oriented
@@ -36,7 +45,7 @@ export default function Page(): JSX.Element {
           </section>
 
           <section className="mb-6 mt-6">
-            <h3 className="text-xs text-gray-500">elsewhere</h3>
+            <h3 className="text-xs text-gray-500">social</h3>
             <div className="text-base">
               <a
                 href="https://victorjambo.medium.com"
@@ -80,7 +89,7 @@ export default function Page(): JSX.Element {
             </div>
           </section>
 
-          <section className="mb-6 mt-6">
+          <section className="mb-6 mt-6 prose lg:prose-lg">
             <h4>Everything I&apos;ve written online.</h4>
             <ul className="text-base">
               <li>
