@@ -46,6 +46,9 @@ export const Blogs = defineDocumentType(() => ({
     date: {
       type: "date",
     },
+    isExternal: {
+      type: "boolean",
+    },
   },
   computedFields,
 }));

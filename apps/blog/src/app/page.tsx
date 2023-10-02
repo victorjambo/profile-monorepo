@@ -22,13 +22,13 @@ export default function Page(): JSX.Element {
               solutions that make a real impact.
             </p>
 
-            <p className="text-lg">
+            <p>
               My technical toolbox is quite diverse, and I&apos;m proficient in
               various technologies, such as ReactJS, NodeJS, NextJS, HTML, CSS,
               JavaScript, Solidity, and Python.
             </p>
 
-            <p className="text-lg">
+            <p>
               Frontend-focused engineer with experience working across teams,
               leading technical projects, and building processes, interested in
               social good.
@@ -84,19 +84,42 @@ export default function Page(): JSX.Element {
             <h4>Everything I&apos;ve written online.</h4>
             <ul className="text-base">
               <li>
-                <Link className="underline cursor-pointer" href="/logs">Published</Link>
+                <Link className="underline cursor-pointer" href="/logs">
+                  Published
+                </Link>
                 <span> — Stuff I&apos;ve sent.</span>
               </li>
               <li>
-                <Link className="underline cursor-pointer" href="/logs?unpublished=true">Unpublished</Link>
+                <Link
+                  className="underline cursor-pointer"
+                  href="/logs?filter=unpublished"
+                >
+                  Unpublished
+                </Link>
                 <span> — Those with a potential future.</span>
               </li>
               <li>
-                <Link className="underline cursor-pointer" href="/tags">Tags</Link>
+                <Link
+                  className="underline cursor-pointer"
+                  href="/logs?filter=external"
+                >
+                  Medium
+                </Link>
+                <span> — published externally.</span>
+              </li>
+              <li>
+                <Link className="underline cursor-pointer" href="/tags">
+                  Tags
+                </Link>
                 <span> — Haphazardly organized loosely by interest.</span>
               </li>
             </ul>
-            <p>you can find all other posts in the <Link className="underline" href="/logs">log</Link></p>
+            <p>
+              you can find all other posts in the{" "}
+              <Link className="underline" href="/logs">
+                log
+              </Link>
+            </p>
           </section>
         </article>
       </main>

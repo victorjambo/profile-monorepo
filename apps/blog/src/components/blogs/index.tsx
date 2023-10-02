@@ -6,12 +6,20 @@ import TableFilter from "../table-filter";
 export default function Blogs({
   query,
 }: {
-  query?: { unpublished: string; filter: string };
+  query?: { filter: string; tags: string };
 }): JSX.Element {
   const blogs = allBlogs.filter((blog) => {
-    if (query?.unpublished) return blog.isVisible && !blog.published;
-    if (query?.filter)
-      return blog.isVisible && blog.tags?.includes(query.filter);
+    if (query) {
+      if (query.filter && query.filter === "unpublished") {
+        return blog.isVisible && !blog.published;
+      }
+      if (query.filter && query.filter === "external") {
+        return blog.isVisible && blog.isExternal;
+      }
+      if (query.tags) {
+        return blog.isVisible && blog.tags?.includes(query.tags);
+      }
+    }
     return blog.isVisible && blog.published;
   });
 
