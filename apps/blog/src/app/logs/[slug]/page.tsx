@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument -- . */
 "use client";
 import moment from "moment";
 import Link from "next/link";
@@ -51,7 +50,6 @@ export default function Page({ params }: PageProps): JSX.Element {
         <div className="flex items-center text-sm text-muted-foreground">
           <span>{readTime} min read</span>
           {blog.date ? (
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- .
             <time dateTime={blog.date}>
               &nbsp;·&nbsp;{moment(blog.date).format("MMM Do, YYYY")}
             </time>
