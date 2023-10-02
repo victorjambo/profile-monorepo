@@ -1,14 +1,21 @@
-import "./globals.css";
-import "ui/styles.css";
+import "../styles/globals.css";
+import "../styles/mdx.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Analytics } from "ui";
-import { MetadataSEO } from "shared-data";
+import { MetadataSEO, cn } from "shared-data";
 import { ThemeProvider } from "../components/theme-provider";
 
-const inter = Inter({
+const fontSans = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fontHeading = localFont({
+  src: "../../assets/fonts/CalSans-SemiBold.woff2",
+  variable: "--font-heading",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +36,11 @@ export default function RootLayout({
       {process.env.NODE_ENV === "production" && <Analytics />}
 
       <body
-        className={`${inter.className} light text-serket dark:text-slate-300 bg-summer dark:bg-gray-900 bg-cover bg-fixed`}
+        className={cn(
+          "bg-background font-sans antialiased",
+          fontSans.variable,
+          fontHeading.variable
+        )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
