@@ -41,6 +41,8 @@ export default function RootLayout({
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  // Borrowed from:
+  // https://github.com/vercel/next.js/discussions/42016
   useEffect(() => {
     const handleStart = (): void => {
       NProgress.start();
