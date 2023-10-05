@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "ui";
-import { MetadataSEO, cn } from "shared-data";
+import { MetadataSEO, cn } from "builders";
 import { ThemeProvider } from "../components/theme-provider";
 
 const fontSans = Inter({

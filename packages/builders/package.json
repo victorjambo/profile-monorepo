@@ -1,6 +1,6 @@
 {
-  "name": "shared-data",
-  "version": "0.0.0",
+  "name": "builders",
+  "version": "1.0.0",
   "private": true,
   "types": "src/index.ts",
   "main": "src/index.ts",

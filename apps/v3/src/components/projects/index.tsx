@@ -1,4 +1,4 @@
-import { projects } from "shared-data";
+import { projects } from "builders";
 import ProjectEvent from "../shared/project-event";
 
 export default function Projects(): JSX.Element {

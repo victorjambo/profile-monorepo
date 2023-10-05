@@ -4,7 +4,7 @@ import type { Timestamp } from "firebase/firestore";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 import type { FirebaseResponse, Data } from "models";
 import { useCallback, useEffect, useState } from "react";
-import { Collections, Config } from "shared-data";
+import { Collections, Config } from "builders";
 import moment from "moment";
 
 export default function Stats(): JSX.Element {

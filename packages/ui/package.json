@@ -29,7 +29,7 @@
     "models": "workspace:*",
     "postcss": "^8.4.20",
     "react": "^18.2.0",
-    "shared-data": "workspace:*",
+    "builders": "workspace:*",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.3",
     "tsconfig": "workspace:*",

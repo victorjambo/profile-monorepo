@@ -11,7 +11,7 @@
 ### packages
 1. eslint-config-custom
 2. models
-3. shared-data
+3. builders
 4. tailwind-config
 5. tsconfig
 6. ui
@@ -22,7 +22,7 @@
 ### `v2`
   - eslint-config-custom
   - models
-  - shared-data
+  - builders
   - tailwind-config
   - tsconfig
   - ui
@@ -30,7 +30,7 @@
 ### `v3`
   - eslint-config-custom
   - models
-  - shared-data
+  - builders
   - tailwind-config
   - tsconfig
   - ui
@@ -42,7 +42,7 @@
   - eslint-config-custom
   - tsconfig
 
-### `shared-data`
+### `builders`
   - eslint-config-custom
   - models
   - tsconfig
@@ -56,6 +56,6 @@
 ### `ui`
   - eslint-config-custom
   - models
-  - shared-data
+  - builders
   - tailwind-config
   - tsconfig

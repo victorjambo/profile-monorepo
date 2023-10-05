@@ -1,5 +1,5 @@
 import React from "react";
-import { DEV_EMAIL } from "shared-data";
+import { DEV_EMAIL } from "builders";
 import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";

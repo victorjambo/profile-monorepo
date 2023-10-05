@@ -9,7 +9,7 @@ import {
 } from "firebase/firestore";
 import { useCallback, useEffect } from "react";
 import type { FirebaseCounter } from "models";
-import { Collections, Config, RoutesDocuments } from "shared-data";
+import { Collections, Config, RoutesDocuments } from "builders";
 
 export const useVisitors = (path: string): void => {
   const visitors = useCallback(async () => {

@@ -1,5 +1,5 @@
 import type { IEventProp } from "models";
-import type { Tech } from "shared-data";
+import type { Tech } from "builders";
 
 type Props = IEventProp<(typeof Tech)[number]>;
 
