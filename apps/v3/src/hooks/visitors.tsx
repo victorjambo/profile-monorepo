@@ -8,8 +8,8 @@ import {
   Timestamp,
 } from "firebase/firestore";
 import { useCallback, useEffect } from "react";
-import type { FirebaseCounter } from "models";
 import { Collections, Config, RoutesDocuments } from "builders";
+import type { FirebaseCounter } from "../types";
 
 export const useVisitors = (path: string): void => {
   const visitors = useCallback(async () => {

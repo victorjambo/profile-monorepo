@@ -1,7 +1,7 @@
-import type { IEventProp } from "models";
 import type { Tech } from "builders";
+import type { EventProp } from "../../types";
 
-type Props = IEventProp<(typeof Tech)[number]>;
+type Props = EventProp<(typeof Tech)[number]>;
 
 export default function ProjectEvent({
   event: { title, role, link, tech },

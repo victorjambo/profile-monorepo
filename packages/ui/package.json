@@ -26,7 +26,6 @@
     "@types/react": "^18.2.5",
     "autoprefixer": "^10.4.13",
     "eslint-config-custom": "workspace:*",
-    "models": "workspace:*",
     "postcss": "^8.4.20",
     "react": "^18.2.0",
     "builders": "workspace:*",

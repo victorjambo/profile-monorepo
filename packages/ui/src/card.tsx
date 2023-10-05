@@ -1,14 +1,6 @@
-import * as React from "react";
+import type { CardProps } from "./types";
 
-export function Card({
-  title,
-  children,
-  href,
-}: {
-  title: string;
-  children: React.ReactNode;
-  href: string;
-}): JSX.Element {
+export function Card({ title, children, href }: CardProps): JSX.Element {
   return (
     <a
       className="ui-group ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30"

@@ -2,19 +2,19 @@
 import { initializeApp } from "firebase/app";
 import type { Timestamp } from "firebase/firestore";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
-import type { FirebaseResponse, Data } from "models";
 import { useCallback, useEffect, useState } from "react";
 import { Collections, Config } from "builders";
 import moment from "moment";
+import type { FirebaseResponse, FirebaseData } from "../../types";
 
 export default function Stats(): JSX.Element {
-  const [data, setData] = useState<Data[]>([]);
+  const [data, setData] = useState<FirebaseData[]>([]);
 
   const fetchRoutes = useCallback(async () => {
     const firebaseApp = initializeApp(Config);
     const firestore = getFirestore(firebaseApp);
 
-    const _data: Data[] = [];
+    const _data: FirebaseData[] = [];
 
     const snapshot = await getDocs(
       collection(firestore, Collections.routes.collection)
