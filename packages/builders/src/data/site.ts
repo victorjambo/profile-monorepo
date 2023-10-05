@@ -3,7 +3,7 @@ import { DEV_NAME } from "./constants";
 
 export const siteConfig: SiteConfig = {
   name: DEV_NAME,
-  description: "Software engineer",
+  description: "software engineer who loves building web apps and designing backend systems.",
   url: "https://mutai.dev",
   ogImage: "https://mutai.dev/images/banner.png",
   links: {

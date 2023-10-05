@@ -21,7 +21,7 @@ const fontHeading = localFont({
 export const metadata: Metadata = {
   ...MetadataSEO,
   title: {
-    default: "Victor Mutai",
+    default: "Blog | Victor Mutai",
     template: `%s | Victor Mutai`,
   },
 };

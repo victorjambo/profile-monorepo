@@ -1,13 +1,11 @@
 import "./globals.css";
 import "ui/styles.css";
 import type { Metadata } from "next";
+import { MetadataSEO } from "builders";
 import Header from "../components/header";
 import { Providers } from "./providers";
 
-export const metadata: Metadata = {
-  title: "Victor Mutai",
-  description: "Senior Software Engineer",
-};
+export const metadata: Metadata = MetadataSEO;
 
 export default function RootLayout({
   children,
