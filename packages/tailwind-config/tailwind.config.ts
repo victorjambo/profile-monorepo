@@ -1,16 +1,16 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,md,mdx}"],
   darkMode: "class",
   plugins: [],
-  theme: {
-    colors: {
-      ...colors,
-      summer: "#FFF2E2",
-      serket: "#004580",
-      vase: "#357EFC",
+  extend: {
+    theme: {
+      colors: {
+        summer: "#FFF2E2",
+        serket: "#004580",
+        vase: "#357EFC",
+      },
     },
   },
 };
