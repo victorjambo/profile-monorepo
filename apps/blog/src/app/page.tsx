@@ -1,5 +1,5 @@
 import React from "react";
-import { DEV_EMAIL } from "shared-data";
+import { DEV_EMAIL } from "builders";
 import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -9,8 +9,8 @@ export default function Page(): JSX.Element {
     <div className="container mx-auto max-w-3xl px-4 lg:px-0">
       <Header />
       <main className="basis-3/4">
-        <article>
-          <section className="prose lg:prose-lg">
+        <article className="">
+          <section className="prose lg:prose-lg dark:prose-invert">
             <p>👋 Hi - I&apos;m Victor.</p>
             <p>
               I&apos;m a software engineer who loves building web apps and
@@ -89,7 +89,7 @@ export default function Page(): JSX.Element {
             </div>
           </section>
 
-          <section className="mb-6 mt-6 prose lg:prose-lg">
+          <section className="mb-6 mt-6 prose lg:prose-lg dark:prose-invert">
             <h4>Everything I&apos;ve written online.</h4>
             <ul className="text-base">
               <li>

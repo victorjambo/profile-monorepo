@@ -1,7 +1,7 @@
-import type { IEvent } from "models";
+import type { Event } from "../types";
 import type { Tech } from "./stacks";
 
-export const works: IEvent<(typeof Tech)[number]>[] = [
+export const works: Event<(typeof Tech)[number]>[] = [
   {
     title: "IOTA Foundation",
     role: "Senior Software Engineer",
@@ -38,13 +38,13 @@ export const works: IEvent<(typeof Tech)[number]>[] = [
     role: "Fullstack Software Engineer",
     tech: ["React", "Python", "Flask", "Node.js"],
     link: "https://andela.com",
-    desc: `worked with cross functional teams to build Andela social platform`
+    desc: `worked with cross functional teams to build Andela social platform`,
   },
   {
     title: "Glassdoor",
     role: "Data Aggregation Engineer",
     tech: ["Ruby on Rails", "Tableau", "Javascript"],
     link: "https://glassdoor.com",
-    desc: `Manage web crawlers, and build ETLs`
+    desc: `Manage web crawlers, and build ETLs`,
   },
 ];

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { Collections, Config, SecretsDocuments } from "shared-data";
+import { Collections, Config, SecretsDocuments } from "builders";
 
 interface LoginProps {
   setIsAuth: React.Dispatch<React.SetStateAction<boolean>>;

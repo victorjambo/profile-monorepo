@@ -9,8 +9,8 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { useCallback, useEffect } from "react";
-import type { FirebaseCounter } from "models";
-import { Collections, Config, V2Documents } from "shared-data";
+import { Collections, Config, V2Documents } from "builders";
+import type { FirebaseCounter } from "../type";
 
 export const useVisitors = (searchParams?: { source: string }): void => {
   const visitors = useCallback(async () => {

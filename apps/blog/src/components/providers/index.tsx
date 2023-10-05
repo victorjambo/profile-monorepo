@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content -- . */
 import Image from "next/image";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { cn } from "shared-data";
+import { cn } from "builders";
 import { Callout } from "./callout";
 
 const ProviderComponents = {

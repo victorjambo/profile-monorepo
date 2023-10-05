@@ -1,4 +1,4 @@
-import { RESUME_URL } from "shared-data";
+import { RESUME_URL } from "builders";
 
 export function Resume(): JSX.Element {
   return (

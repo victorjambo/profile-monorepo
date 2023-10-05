@@ -1,4 +1,4 @@
-import { cn } from "shared-data";
+import { cn } from "builders";
 
 interface CalloutProps {
   icon?: string;

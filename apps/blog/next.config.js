@@ -1,7 +1,7 @@
 const { withContentlayer } = require("next-contentlayer");
 
 module.exports = withContentlayer({
-  transpilePackages: ["shared-data"],
+  transpilePackages: ["builders"],
   reactStrictMode: true,
   images: {
     remotePatterns: [

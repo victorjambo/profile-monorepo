@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "ui";
-import { MetadataSEO, cn } from "shared-data";
+import { MetadataSEO, cn } from "builders";
 import { ThemeProvider } from "../components/theme-provider";
 
 const fontSans = Inter({
@@ -21,7 +21,7 @@ const fontHeading = localFont({
 export const metadata: Metadata = {
   ...MetadataSEO,
   title: {
-    default: "Victor Mutai",
+    default: "Blog | Victor Mutai",
     template: `%s | Victor Mutai`,
   },
 };

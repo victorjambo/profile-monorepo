@@ -16,7 +16,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "shared-data": "workspace:*",
+    "builders": "workspace:*",
     "sharp": "^0.32.1",
     "ui": "workspace:*"
   },
@@ -27,7 +27,6 @@
     "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.13",
     "eslint-config-custom": "workspace:*",
-    "models": "workspace:*",
     "postcss": "^8.4.20",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.3",

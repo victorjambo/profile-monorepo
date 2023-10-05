@@ -1,7 +1,7 @@
-import type { IEvent } from "models";
+import type { Event } from "../types";
 import type { Tech } from "./stacks";
 
-export const projects: IEvent<(typeof Tech)[number]>[] = [
+export const projects: Event<(typeof Tech)[number]>[] = [
   {
     title: "Lit Staking",
     role: "Official staking site for LIT Coin",

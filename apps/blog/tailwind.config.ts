@@ -2,14 +2,12 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 import sharedConfig from "tailwind-config/tailwind.config.ts";
-import colors from "tailwindcss/colors";
 
 sharedConfig.plugins = [require("@tailwindcss/typography")];
 
 sharedConfig.theme = {
   extend: {
     colors: {
-      ...colors,
       muted: {
         DEFAULT: "hsl(var(--muted))",
         foreground: "hsl(var(--muted-foreground))",

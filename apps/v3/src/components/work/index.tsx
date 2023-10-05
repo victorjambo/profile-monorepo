@@ -1,5 +1,5 @@
 import React from "react";
-import { works } from "shared-data";
+import { works } from "builders";
 import Event from "../shared/event";
 
 export default function Work(): JSX.Element {

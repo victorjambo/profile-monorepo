@@ -2,7 +2,7 @@
 import moment from "moment";
 import Link from "next/link";
 import Image from "next/image";
-import { cn } from "shared-data";
+import { cn } from "builders";
 import { notFound } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import Header from "../../../components/header";

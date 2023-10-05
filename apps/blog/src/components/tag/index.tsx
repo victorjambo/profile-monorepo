@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { cn } from "shared-data";
+import { cn } from "builders";
 
 // TODO improve color selection
 export default function Tag({

@@ -5,57 +5,56 @@
 ## Packages
 
 ### apps
+
 1. v2
 2. v3
 
 ### packages
-1. eslint-config-custom
-2. models
-3. shared-data
-4. tailwind-config
-5. tsconfig
-6. ui
 
+1. eslint-config-custom
+2. builders
+3. tailwind-config
+4. tsconfig
+5. ui
 
 ## Imports
 
 ### `v2`
-  - eslint-config-custom
-  - models
-  - shared-data
-  - tailwind-config
-  - tsconfig
-  - ui
+
+- eslint-config-custom
+- builders
+- tailwind-config
+- tsconfig
+- ui
 
 ### `v3`
-  - eslint-config-custom
-  - models
-  - shared-data
-  - tailwind-config
-  - tsconfig
-  - ui
+
+- eslint-config-custom
+- builders
+- tailwind-config
+- tsconfig
+- ui
 
 ### `eslint-config-custom`
+
   - x
 
-### `models`
-  - eslint-config-custom
-  - tsconfig
+### `builders`
 
-### `shared-data`
-  - eslint-config-custom
-  - models
-  - tsconfig
+- eslint-config-custom
+- tsconfig
 
 ### `tailwind-config`
-  - x
+
+- x
 
 ### `tsconfig`
-  - x
+
+- x
 
 ### `ui`
-  - eslint-config-custom
-  - models
-  - shared-data
-  - tailwind-config
-  - tsconfig
+
+- eslint-config-custom
+- builders
+- tailwind-config
+- tsconfig

@@ -4,7 +4,7 @@ import "ui/styles.css";
 import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import { Analytics } from "ui";
-import { MetadataSEO } from "shared-data";
+import { MetadataSEO } from "builders";
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],

@@ -15,7 +15,7 @@
     "next": "^13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "shared-data": "workspace:*",
+    "builders": "workspace:*",
     "ui": "workspace:*"
   },
   "devDependencies": {
@@ -25,7 +25,6 @@
     "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.13",
     "eslint-config-custom": "workspace:*",
-    "models": "workspace:*",
     "postcss": "^8.4.20",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.3",
