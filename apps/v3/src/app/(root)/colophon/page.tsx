@@ -1,8 +1,8 @@
 import { Laila } from "next/font/google";
 import { NavBack } from "ui";
 import { Tech } from "builders";
-import Footer from "../../components/footer";
-import HeaderLinks from "../../components/links/header";
+import Footer from "../../../components/footer";
+import HeaderLinks from "../../../components/links/header";
 
 const laila = Laila({
   subsets: ["latin"],

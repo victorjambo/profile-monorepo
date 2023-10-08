@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import HeaderLinks from "../components/links/header";
-import Work from "../components/work";
-import Hero from "../components/hero";
-import Footer from "../components/footer";
-import Projects from "../components/projects";
-import { useReferer } from "../hooks/referer";
+import HeaderLinks from "../../components/links/header";
+import Work from "../../components/work";
+import Hero from "../../components/hero";
+import Footer from "../../components/footer";
+import Projects from "../../components/projects";
+import { useReferer } from "../../hooks/referer";
 
 export default function Page({
   searchParams,

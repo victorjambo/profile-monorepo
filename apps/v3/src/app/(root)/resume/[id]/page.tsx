@@ -1,6 +1,6 @@
 "use client";
 import { NavBack, Resume } from "ui";
-import { useVisitors } from "../../../hooks/visitors";
+import { useVisitors } from "../../../../hooks/visitors";
 
 export default function ResumeView({
   params,
