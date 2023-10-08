@@ -7,3 +7,8 @@ export function calculateReadTime(articleText: string): number {
   const wordsPerMinute = 200;
   return Math.ceil(wordCount / wordsPerMinute);
 }
+
+export function absoluteUrl(path: string): string {
+  const base = process.env.NEXT_PUBLIC_APP_URL ?? "";
+  return `${base}${path}`;
+}

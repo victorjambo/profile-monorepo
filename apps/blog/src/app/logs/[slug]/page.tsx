@@ -1,13 +1,14 @@
-"use client";
 import moment from "moment";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "builders";
 import { notFound } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
+import type { Metadata } from "next";
+import { siteConfig } from "builders/src/data/site";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
-import { calculateReadTime } from "../../../helpers/utils";
+import { absoluteUrl, calculateReadTime } from "../../../helpers/utils";
 import { MDXProvider } from "../../../components/providers";
 import { allBlogs } from "../../../../.contentlayer/generated";
 import type { Blogs } from "../../../../.contentlayer/generated";
@@ -73,4 +74,45 @@ export default function Page({ params }: PageProps): JSX.Element {
       <Footer />
     </div>
   );
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const post = getPostFromParams(params);
+
+  if (!post) {
+    return {};
+  }
+
+  const url = process.env.NEXT_PUBLIC_APP_URL;
+
+  const ogUrl = new URL(`${url}/api/og`);
+  ogUrl.searchParams.set("heading", post.title);
+  ogUrl.searchParams.set("type", "Blog Post");
+  ogUrl.searchParams.set("mode", "dark");
+
+  return {
+    title: post.title,
+    description: post.description,
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url: absoluteUrl(`/${post.slug}`),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [ogUrl.toString()],
+    },
+  };
 }
