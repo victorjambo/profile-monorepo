@@ -11,7 +11,7 @@ export default function Page(): JSX.Element {
       <main className="basis-3/4">
         <article className="">
           <section className="prose lg:prose-lg dark:prose-invert">
-            <p>👋 Hi - I&apos;m Victor.</p>
+            <p>👋 Hi - I&apos;m Victor, and this is my blog.</p>
             <p>
               I&apos;m a software engineer who loves building web apps and
               designing backend systems. I enjoy working in a team environment
