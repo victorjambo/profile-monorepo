@@ -5,4 +5,5 @@ import "./styles.css";
 export * from "./card";
 export * from "./resume";
 export * from "./analytics";
+export * from "./analytics/blog";
 export * from "./nav-back";

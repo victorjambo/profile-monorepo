@@ -3,12 +3,16 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 const links = [
   {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/mutaivictor/",
+  },
+  {
     title: "Github",
     link: "https://github.com/victorjambo/",
   },
   {
-    title: "Linkedin",
-    link: "https://www.linkedin.com/in/mutaivictor/",
+    title: "Blogs",
+    link: "https://blog.mutai.dev",
   },
   {
     title: "Mail",

@@ -6,6 +6,12 @@ export default function FooterLinks(): JSX.Element {
     <div className="flex space-x-6">
       <Link
         className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
+        href="/resume/c2l0ZQ"
+      >
+        cv
+      </Link>
+      <Link
+        className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
         href="/colophon"
       >
         colophon

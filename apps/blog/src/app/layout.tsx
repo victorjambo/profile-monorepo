@@ -4,7 +4,7 @@ import "../styles/mdx.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import { Analytics } from "ui";
+import { BlogAnalytics } from "ui";
 import { MetadataSEO, cn } from "builders";
 import { ThemeProvider } from "../components/theme-provider";
 
@@ -33,8 +33,6 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      {process.env.NODE_ENV === "production" && <Analytics />}
-
       <body
         className={cn(
           "bg-background font-sans antialiased",
@@ -45,6 +43,8 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
+
+        {process.env.NODE_ENV === "production" && <BlogAnalytics />}
       </body>
     </html>
   );
