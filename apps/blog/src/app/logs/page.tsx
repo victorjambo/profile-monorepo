@@ -2,6 +2,10 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Blogs from "../../components/blogs";
 
+export const metadata = {
+  title: "Logs",
+}
+
 export default function Page({
   searchParams,
 }: {

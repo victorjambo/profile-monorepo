@@ -2,6 +2,10 @@ import Tags from "../../components/tags";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 
+export const metadata = {
+  title: "Tags",
+}
+
 export default function Page(): JSX.Element {
   return (
     <div className="container mx-auto max-w-3xl px-4 lg:px-0">
