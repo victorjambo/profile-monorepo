@@ -11,8 +11,8 @@ export default function Header(): JSX.Element {
       </div>
       <div className="flex items-center">
         <ul className="flex">
-          <li className="pr-4 font-bold">
-            <Link href="/logs">Log</Link>
+          <li className="pr-4">
+            <Link className="rounded-md font-bold hover:bg-accent hover:text-accent-foreground py-2 px-4" href="/logs">Log</Link>
           </li>
         </ul>
       </div>
