@@ -9,6 +9,6 @@ export function calculateReadTime(articleText: string): number {
 }
 
 export function absoluteUrl(path: string): string {
-  const base = process.env.NEXT_PUBLIC_APP_URL ?? "";
+  const base = process.env.NEXT_PUBLIC_BLOG_APP_URL ?? "";
   return `${base}${path}`;
 }

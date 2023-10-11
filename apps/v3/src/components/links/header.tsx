@@ -12,7 +12,7 @@ const links = [
   },
   {
     title: "Blogs",
-    link: "https://blog.mutai.dev",
+    link: process.env.NEXT_PUBLIC_BLOG_APP_URL ?? "/",
   },
   {
     title: "Mail",

@@ -83,7 +83,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     return {};
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL;
+  const url = process.env.NEXT_PUBLIC_BLOG_APP_URL;
 
   const ogUrl = new URL(`${url}/api/og`);
   ogUrl.searchParams.set("heading", post.title);
