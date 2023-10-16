@@ -18,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en">
+    <html className="light" lang="en">
       {process.env.NODE_ENV === "production" && <Analytics />}
 
       <body
-        className={`${comfortaa.className} light old-text-serket dark:text-slate-300 old-bg-summer dark:bg-gray-900 bg-cover bg-fixed`}
+        className={`${comfortaa.className} dark:text-slate-300 dark:bg-gray-900 bg-cover bg-fixed`}
       >
         {children}
       </body>

@@ -9,10 +9,13 @@ const laila = Laila({
   weight: "700",
 });
 
+export const metadata = {
+  title: "Colophon",
+};
+
 export default function Page(): JSX.Element {
   return (
     <main className="w-full relative">
-      <title>Colophon - Victor Mutai</title>
       <div className="h-screen p-6 md:p-11">
         <NavBack />
         <HeaderLinks />

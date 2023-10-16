@@ -9,10 +9,10 @@ export default function FooterLinks(): JSX.Element {
   return (
     <div className="flex space-x-6">
       <Link
-        className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
-        href="/resume/c2l0ZQ?utm_source=c2l0ZQ"
+        className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted gradient-resume"
+        href="/cv"
       >
-        cv
+        resume
       </Link>
       <Link
         className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"

@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-resume {
+  @apply bg-gradient-to-r from-[#ff1a4b] via-[#e8305e] to-[#8838f0] inline-block text-transparent bg-clip-text;
+}

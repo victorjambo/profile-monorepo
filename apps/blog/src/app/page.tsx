@@ -28,7 +28,7 @@ export default function Page(): JSX.Element {
             </p>
             <p>
               I love taking on complex challenges and creating product-oriented
-              solutions that make a real impact.
+              solutions that make a real impact. ✨
             </p>
 
             <p>

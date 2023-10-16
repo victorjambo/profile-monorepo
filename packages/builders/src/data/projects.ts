@@ -5,7 +5,7 @@ export const projects: Event<(typeof Tech)[number]>[] = [
   {
     title: "Lit Staking",
     role: "Official staking site for LIT Coin",
-    link: "https://coinmarketcap.com/currencies/lit/",
+    link: "https://holdlit.getlit.wtf",
     img: "/images/banners/lit-staking.png",
   },
   {

@@ -1,5 +1,8 @@
 import React from "react";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownLeftIcon,
+  ArrowUpRightIcon,
+} from "@heroicons/react/24/outline";
 
 const links = [
   {
@@ -18,6 +21,11 @@ const links = [
     title: "Mail",
     link: "mailto:victormutaijambo+dev@gmail.com",
   },
+  {
+    title: "resume",
+    link: "/cv",
+    internal: true,
+  },
 ];
 
 export default function HeaderLinks(): JSX.Element {
@@ -29,10 +37,16 @@ export default function HeaderLinks(): JSX.Element {
           href={link.link}
           key={link.title}
           rel="noopener noreferrer"
-          target="_blank"
+          target={link.internal ? "_self" : "_blank"}
         >
-          <span>{link.title}</span>
-          <ArrowUpRightIcon className="w-3 h-3" />
+          <span className={link.internal ? "gradient-resume" : ""}>
+            {link.title}
+          </span>
+          {link.internal ? (
+            <ArrowDownLeftIcon className="w-3 h-3" />
+          ) : (
+            <ArrowUpRightIcon className="w-3 h-3" />
+          )}
         </a>
       ))}
     </div>
