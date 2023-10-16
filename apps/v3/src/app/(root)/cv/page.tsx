@@ -7,6 +7,7 @@ import { ThemeToggle } from "../../../components/theme-toggle";
 import { Github } from "../../../components/social/github";
 import { Linkedin } from "../../../components/social/linkedin";
 import { Twitter } from "../../../components/social/twitter";
+import { Email } from "../../../components/social/email";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function Page(): JSX.Element {
                   <Github />
                   <Linkedin />
                   <Twitter />
+                  <Email />
                 </div>
               </div>
               <div className="text-left">
