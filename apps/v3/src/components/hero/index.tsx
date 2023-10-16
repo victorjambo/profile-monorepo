@@ -1,5 +1,6 @@
 import React from "react";
 import { Laila } from "next/font/google";
+import Link from "next/link";
 
 const laila = Laila({
   subsets: ["latin"],
@@ -34,6 +35,10 @@ export default function Hero(): JSX.Element {
           Proven track record of delivering high-quality solutions to complex
           problems across various industries, including finance.
         </p>
+
+        <div className="border hover:shadow-md p-5 rounded-2xl">
+          View my <Link className="gradient-resume" href="/cv">resume</Link> 📒
+        </div>
       </div>
     </div>
   );

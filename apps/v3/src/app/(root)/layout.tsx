@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import { Analytics } from "ui";
 import { MetadataSEO } from "builders";
+import { ThemeProvider } from "../../components/theme-provider";
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
@@ -18,13 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html className="light" lang="en">
+    <html lang="en">
       {process.env.NODE_ENV === "production" && <Analytics />}
 
       <body
         className={`${comfortaa.className} dark:text-slate-300 dark:bg-gray-900 bg-cover bg-fixed`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

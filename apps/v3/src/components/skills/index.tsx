@@ -12,7 +12,7 @@ export default function Skills(): JSX.Element {
 
 function Skill({ tech }: { tech: string }): JSX.Element {
   return (
-    <span className="border rounded-full px-2 py-1 m-0.5 cursor-default hover:scale-105">
+    <span className="border dark:border-slate-800 rounded-full px-2 py-1 m-0.5 cursor-default hover:scale-105">
       {tech}
     </span>
   );

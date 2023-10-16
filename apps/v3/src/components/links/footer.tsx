@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { ThemeToggle } from "../theme-toggle";
 
 export default function FooterLinks(): JSX.Element {
   const blogUrl = `${
@@ -7,7 +8,7 @@ export default function FooterLinks(): JSX.Element {
   }?utm_source=mutai.dev`;
 
   return (
-    <div className="flex space-x-6">
+    <div className="flex space-x-6 items-center">
       <Link
         className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted gradient-resume"
         href="/cv"
@@ -26,6 +27,7 @@ export default function FooterLinks(): JSX.Element {
       >
         logs
       </Link>
+      <ThemeToggle />
     </div>
   );
 }

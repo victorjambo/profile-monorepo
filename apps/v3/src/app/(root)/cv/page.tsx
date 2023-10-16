@@ -1,9 +1,12 @@
-import "./cv.css";
 import { Raleway } from "next/font/google";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { RESUME_INTERNAL_URL } from "builders";
+import Link from "next/link";
 import Skills from "../../../components/skills";
-import Image from "next/image";
+import { ThemeToggle } from "../../../components/theme-toggle";
+import { Github } from "../../../components/social/github";
+import { Linkedin } from "../../../components/social/linkedin";
+import { Twitter } from "../../../components/social/twitter";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -15,34 +18,24 @@ export const metadata = {
 
 export default function Page(): JSX.Element {
   return (
-    <main className={`${raleway.className} bg-slate-50 w-full`}>
-      <div className="flex justify-center py-0 md:py-16 h-full">
-        <div className="bg-white container mx-auto rounded-lg border relative">
+    <main
+      className={`${raleway.className} bg-slate-50 dark:bg-slate-900 w-full dark:text-slate-300`}
+    >
+      <div className="flex justify-center py-0 md:pt-16 flex-col">
+        <div className="bg-white dark:bg-slate-900 dark:shadow-2xl container mx-auto rounded-lg border dark:border-slate-800 relative">
           <div className="absolute right-0 p-5">
             <a download="victor-mutai-resume" href={RESUME_INTERNAL_URL}>
               <ArrowDownTrayIcon className="w-5 h-5 hover:scale-125" />
             </a>
           </div>
-          <div className="md:grid grid-cols-3 divide-x h-full py-5">
-            <section className="text-center p-12 flex-col flex divide-y">
+          <div className="md:grid grid-cols-3 divide-x dark:divide-slate-800 h-full py-5">
+            <section className="text-center p-12 flex-col flex divide-y dark:divide-slate-800">
               <div>
                 <span className="font-bold text-4xl">Victor Mutai</span>
                 <div className="flex justify-center space-x-2 py-6">
-                  <img
-                    alt="x"
-                    className="w-7 h-7 hover:scale-110"
-                    src="/images/social/github.svg"
-                  />
-                  <img
-                    alt="x"
-                    className="w-7 h-7 hover:scale-110"
-                    src="/images/social/linkedin.svg"
-                  />
-                  <img
-                    alt="x"
-                    className="w-7 h-7 hover:scale-110"
-                    src="/images/social/twitter.svg"
-                  />
+                  <Github />
+                  <Linkedin />
+                  <Twitter />
                 </div>
               </div>
               <div className="text-left">
@@ -346,11 +339,20 @@ export default function Page(): JSX.Element {
                     <span className="font-medium space-x-1 text-sm text-slate-600">
                       <span>2022 - Present</span>
                     </span>
-                    <span>Mulitichain NFT marketplace</span>
+                    <span>Multichain NFT marketplace</span>
                   </span>
                 </div>
               </section>
             </section>
+          </div>
+        </div>
+
+        <div className="bg-white dark:bg-slate-900 dark:shadow-2xl container mx-auto rounded-t-lg border dark:border-slate-800 mt-16">
+          <div className="flex justify-between items-center py-4 px-12">
+            <Link className="flex text-sm font-bold" href="/">
+              main site 🙌
+            </Link>
+            <ThemeToggle />
           </div>
         </div>
       </div>
