@@ -3,7 +3,7 @@ import Script from "next/script";
 export function BlogAnalytics(): JSX.Element {
   return (
     <>
-      <Script src="/scripts/debugger.js" />
+      {/* <Script src="/scripts/debugger.js" /> */}
 
       <Script
         async
