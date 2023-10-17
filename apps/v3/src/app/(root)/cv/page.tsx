@@ -6,7 +6,6 @@ import Skills from "../../../components/skills";
 import { ThemeToggle } from "../../../components/theme-toggle";
 import { Github } from "../../../components/social/github";
 import { Linkedin } from "../../../components/social/linkedin";
-import { Twitter } from "../../../components/social/twitter";
 import { Email } from "../../../components/social/email";
 
 const raleway = Raleway({
