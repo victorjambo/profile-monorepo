@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${comfortaa.className} dark:text-slate-300 dark:bg-gray-900 bg-cover bg-fixed`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
       </body>
