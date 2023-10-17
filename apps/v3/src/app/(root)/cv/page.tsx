@@ -36,7 +36,6 @@ export default function Page(): JSX.Element {
                 <div className="flex justify-center space-x-2 py-6">
                   <Github />
                   <Linkedin />
-                  <Twitter />
                   <Email />
                 </div>
               </div>
