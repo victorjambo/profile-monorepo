@@ -16,13 +16,13 @@ export default function FooterLinks(): JSX.Element {
         resume
       </Link>
       <Link
-        className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
+        className="hidden sm:block hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
         href="/colophon"
       >
         colophon
       </Link>
       <Link
-        className="hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
+        className="hidden sm:block hover:border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
         href={blogUrl}
       >
         logs
