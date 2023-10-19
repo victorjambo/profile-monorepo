@@ -27,5 +27,50 @@
       "purpose": "any maskable"
     }
   ],
-  "display": "standalone"
+  "display": "standalone",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#fff",
+  "scope": "/",
+  "theme_color": "#fff",
+  "shortcuts": [
+    {
+      "name": "cv - Victor Mutai",
+      "short_name": "cv",
+      "description": "Resume",
+      "url": "/cv?source=pwa",
+      "icons": [
+        {
+          "src": "/images/icons/apple-icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Colophon - Victor Mutai",
+      "short_name": "Colophon",
+      "description": "Colophon",
+      "url": "/colophon?source=pwa",
+      "icons": [
+        {
+          "src": "/images/icons/apple-icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/pwa/screenshot1.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/pwa/screenshot2.png",
+      "type": "image/png",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ]
 }

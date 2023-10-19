@@ -55,7 +55,7 @@ export default function HeaderLinks(): JSX.Element {
         ))}
       </ul>
       <Popover className="relative inline-flex md:hidden">
-        <Popover.Button className="items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg  hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <Popover.Button className="items-center flex w-10 h-10 justify-center text-sm text-slate-500 rounded-lg  hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span className="sr-only">Open main menu</span>
           <svg
             aria-hidden="true"
