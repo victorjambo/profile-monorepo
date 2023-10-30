@@ -17,7 +17,7 @@ const links = [
   },
   {
     title: "Blogs",
-    link: process.env.NEXT_PUBLIC_BLOG_APP_URL ?? "/",
+    link: process.env.NEXT_PUBLIC_BLOG_APP_URL ?? "https://blog.mutai.dev",
   },
   {
     title: "Mail",
