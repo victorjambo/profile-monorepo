@@ -1,0 +1,69 @@
+{
+  "@context": {
+      "@version": 1.1,
+      "@protected": true,
+      "ogtsc": "https://mutai.dev/open-gtsc-context.jsonld/",
+      "etsi":  "https://uri.etsi.org/ngsi-ld/",
+      
+      "relationship": "ogtsc:hasRelationship",
+      "resource": "ogtsc:hasResource",
+
+      "Relationship": "etsi:Relationship",
+      "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "Item": "ogtsc:Item",
+
+      "object": "etsi:object",
+      "relationshipType": {
+          "@id": "ogtsc:relationshipType",
+          "@type": "@vocab"
+      },
+      
+      "child":    "ogtsc:child",
+      "parent":   "ogtsc:parent",
+      "inherits": "ogtsc:inherits",
+
+      "identificationId": {
+          "@id":"ogtsc:identificationId",
+          "@type":"xsd:string"
+      },
+    
+      "identity": {
+          "@id": "ogtsc:identity",
+          "@type": "@id"
+      },
+  
+      "fingerprint": "ogtsc:fingerprint",
+      "blobStorageId": {
+          "@id": "ogtsc:blobStorageId",
+          "@type": "@id"
+      },
+      "history": {
+           "@id": "ogtsc:history",
+           "@type": "@json"
+      },
+      "callbackUrl": {
+          "@id": "ogtsc:callbackUrl",
+          "@type": "xsd:anyURI"
+      },
+      "code": {
+        "@id": "ogtsc:code",
+        "@type": "xsd:integer"
+      },
+      "documentBinaryData": {
+          "@id": "ogtsc:documentBinaryData",
+          "@type": "xsd:string" 
+      },
+      "ucr": {
+          "@id": "ogtsc:ucr",
+          "@type": "xsd:string" 
+      },
+      "invoiceNumber": {
+          "@id": "ogtsc:invoiceNumber",
+          "@type": "xsd:string" 
+      },
+      "shippingNumber": {
+          "@id": "ogtsc:shippingNumber",
+          "@type": "xsd:string" 
+      }
+  }
+}
