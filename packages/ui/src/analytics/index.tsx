@@ -33,12 +33,6 @@ export function Analytics(): JSX.Element {
               `,
         }}
       />
-
-      <Script
-        data-domain="mutai.dev"
-        defer
-        src="https://plausible.io/js/script.js"
-      />
     </>
   );
 }

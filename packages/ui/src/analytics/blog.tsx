@@ -20,12 +20,6 @@ export function BlogAnalytics(): JSX.Element {
               `,
         }}
       />
-
-      <Script
-        data-domain="blog.mutai.dev"
-        defer
-        src="https://plausible.io/js/script.js"
-      />
     </>
   );
 }
