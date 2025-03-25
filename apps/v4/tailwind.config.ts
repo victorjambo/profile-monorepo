@@ -18,4 +18,5 @@ export default {
     },
   },
   plugins: [typography, flowbite.plugin()],
+  darkMode: "class",
 } satisfies Config;
