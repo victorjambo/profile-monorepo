@@ -35,10 +35,10 @@
   "theme_color": "#fff",
   "shortcuts": [
     {
-      "name": "cv - Victor Mutai",
-      "short_name": "cv",
-      "description": "Resume",
-      "url": "/cv?source=pwa",
+      "name": "Victor Mutai - Education",
+      "short_name": "Education",
+      "description": "Education",
+      "url": "/education?source=pwa",
       "icons": [
         {
           "src": "/images/icons/apple-icon-192x192.png",
@@ -47,10 +47,34 @@
       ]
     },
     {
-      "name": "Colophon - Victor Mutai",
-      "short_name": "Colophon",
-      "description": "Colophon",
-      "url": "/colophon?source=pwa",
+      "name": "Victor Mutai - Experience",
+      "short_name": "Experience",
+      "description": "Experience",
+      "url": "/experience?source=pwa",
+      "icons": [
+        {
+          "src": "/images/icons/apple-icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Victor Mutai - Projects",
+      "short_name": "Projects",
+      "description": "Projects",
+      "url": "/projects?source=pwa",
+      "icons": [
+        {
+          "src": "/images/icons/apple-icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Victor Mutai - Contact",
+      "short_name": "Contact",
+      "description": "Contact",
+      "url": "/contact?source=pwa",
       "icons": [
         {
           "src": "/images/icons/apple-icon-192x192.png",
