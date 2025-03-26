@@ -5,7 +5,6 @@ import "./globals.css";
 import { MetadataSEO } from "builders";
 import { Navbar } from "../../components/navbar";
 import { ThemeProvider } from "../../components/theme-provider";
-// import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto container`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto container max-w-4xl`}
       >
         <React.StrictMode>
           <React.Suspense fallback={<div>Loading</div>}>
