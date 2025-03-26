@@ -6,8 +6,6 @@ import { MetadataSEO } from "builders";
 import { Navbar } from "../../components/navbar";
 import { ThemeProvider } from "../../components/theme-provider";
 // import { ThemeProvider } from "next-themes";
-import { Flowbite, Spinner, ThemeModeScript } from "flowbite-react";
-import { FlowbiteTheme } from "../../utils/flowbite.config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,20 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <ThemeModeScript />
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto container bg-background`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto container`}
       >
         <React.StrictMode>
-          <React.Suspense fallback={<Spinner />}>
-            <Flowbite theme={{ theme: FlowbiteTheme }}>
-              <ThemeProvider defaultTheme="dark" enableSystem={false}>
-                <Navbar />
-                {children}
-              </ThemeProvider>
-            </Flowbite>
+          <React.Suspense fallback={<div>Loading</div>}>
+            <ThemeProvider defaultTheme="light" enableSystem={false}>
+              <Navbar />
+              {children}
+            </ThemeProvider>
           </React.Suspense>
         </React.StrictMode>
       </body>
