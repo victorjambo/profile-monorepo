@@ -78,9 +78,5 @@ export const MetadataSEO: Metadata = {
   publisher: "Vercel",
   creator: siteConfig.name,
   generator: "Next.js",
-  applicationName: siteConfig.name,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  applicationName: siteConfig.name
 };
