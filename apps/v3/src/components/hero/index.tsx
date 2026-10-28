@@ -9,37 +9,56 @@ const laila = Laila({
 
 export default function Hero(): JSX.Element {
   return (
-    <div className="flex flex-col justify-end h-full max-w-lg">
-      <div
-        className={`${laila.className} dark:text-white text-4xl font-bold pb-9`}
-      >
-        Victor Mutai
-      </div>
-      <div className="flex flex-col space-y-4">
-        <p>
-          Currently building distributed systems at&nbsp;
-          <a
-            className="border-b old-border-slate-900 border-vase dark:border-slate-300 border-dotted"
-            href="https://iota.org"
-            rel="noopener noreferrer"
-            target="_blank"
+    <section className="flex h-full max-w-2xl flex-col justify-center py-10 md:py-16">
+      <div className="flex flex-col gap-5 md:gap-6">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+            Victor Mutai
+          </p>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
+            Lead Engineer focused on supply-chain platforms, trade data
+            infrastructure, and resilient backend systems.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <h1
+            className={`${laila.className} text-4xl font-bold leading-tight text-slate-950 dark:text-white md:text-5xl md:leading-tight`}
           >
-            IOTA Foundation
+            Building scalable supply-chain infrastructure for global trade
+          </h1>
+
+          <p className="max-w-xl text-base leading-7 text-slate-700 dark:text-slate-200 md:text-lg">
+            Lead Engineer specializing in Node.js, TypeScript,
+            UN/CEFACT-aligned systems, and cross-border data-sharing
+            platforms.
+          </p>
+
+          <p className="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300 md:text-base">
+            I design and deliver backend systems, integration workflows, and
+            platform architecture for modern trade and logistics products.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
+          <Link
+            className="button-primary"
+            href="/#projects"
+          >
+            View Projects
+          </Link>
+          <a
+            className="button-secondary"
+            href="mailto:victormutaijambo+dev@gmail.com"
+          >
+            Contact Me
           </a>
-          &nbsp; An open-source, scalable, feeless, green & permission less
-          distributed ledger.
-        </p>
+        </div>
 
-        <p>
-          I am a senior software engineer with expertise in ReactJS, and NodeJS.
-          Proven track record of delivering high-quality solutions to complex
-          problems across various industries, including finance.
-        </p>
-
-        <div className="border hover:shadow-md p-5 rounded-2xl">
-          View my <Link className="gradient-resume" href="/cv">resume</Link> 📒
+        <div className="pt-4 text-sm text-slate-600 dark:text-slate-300">
+          View my <Link className="gradient-resume" href="/cv">resume</Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

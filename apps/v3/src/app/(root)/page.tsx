@@ -5,6 +5,7 @@ import Work from "../../components/work";
 import Hero from "../../components/hero";
 import Footer from "../../components/footer";
 import Projects from "../../components/projects";
+import CTASection from "../../components/cta-section";
 import { useReferer } from "../../hooks/referer";
 
 export default function Page({
@@ -16,7 +17,7 @@ export default function Page({
 
   return (
     <main className="w-full">
-      <div className="h-[100dvh] md:h-screen p-6 md:p-11 grid md:grid-cols-2">
+      <div className="min-h-[100dvh] md:min-h-screen p-6 md:p-11 grid gap-8 md:grid-cols-2">
         <div className="md:order-first order-last">
           <Hero />
         </div>
@@ -24,6 +25,7 @@ export default function Page({
       </div>
       <Work />
       <Projects />
+      <CTASection className="pb-16 md:pb-20" />
       <Footer />
     </main>
   );
