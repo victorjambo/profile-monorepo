@@ -17,6 +17,11 @@ export interface Event<TypeTech> {
   img?: string;
   tech?: TypeTech[];
   desc?: string;
+  problem?: string;
+  solution?: string;
+  impact?: string;
+  liveDemo?: string;
+  sourceCode?: string;
 }
 
 export interface EventProp<TypeTech> {
